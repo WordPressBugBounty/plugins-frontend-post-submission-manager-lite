@@ -1,0 +1,1 @@
+# plugins-frontend-post-submission-manager-lite
