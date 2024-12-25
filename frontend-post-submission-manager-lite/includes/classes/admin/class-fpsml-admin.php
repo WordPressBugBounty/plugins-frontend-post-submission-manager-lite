@@ -8,6 +8,7 @@ if (!class_exists('FPSML_Admin')) {
         function __construct() {
             add_action('admin_menu', array($this, 'add_admin_menus'));
             add_action('admin_footer', array($this, 'add_extra_html'));
+            add_action('admin_footer', array($this, 'compare_plugin_html'));
         }
 
         function add_admin_menus() {
@@ -35,6 +36,10 @@ if (!class_exists('FPSML_Admin')) {
             } else {
                 include(FPSML_PATH . '/includes/views/backend/forms/form-list.php');
             }
+        }
+
+        function compare_plugin_html() {
+            include(FPSML_PATH . '/includes/views/backend/compare_plugin_html.php');
         }
 
         function render_form_settings_page() {

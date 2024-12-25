@@ -12,6 +12,7 @@ $fpsml_settings = get_option('fpsml_settings');
         <div class="fpsml-add-wrap">
             <input type="button" value="<?php esc_html_e('Save Settings', 'frontend-post-submission-manager-lite'); ?>" class="fpsml-primary-button fpsml-form-save" data-form="fpsml-settings-form"/>
             <a href="<?php echo admin_url('admin.php?page=fpsm'); ?>" class="fpsml-button-primary btn-cancel">Cancel</a>
+            <div class="fpsml-compare-btn"><div class="compare-click">Free Vs Pro</div></div>
         </div>
     </div>
 <?php include(FPSML_PATH.'/includes/views/backend/upgrade-banner.php');?>

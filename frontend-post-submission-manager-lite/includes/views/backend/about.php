@@ -5,6 +5,7 @@
             <span><?php esc_html_e('Lite', 'frontend-post-submission-manager-lite'); ?></span>
         </h1>
         <div class="fpsml-add-wrap">
+        <div class="fpsml-compare-btn"><div class="compare-click">Free Vs Pro</div></div>
             <a href="<?php echo esc_url(FPSML_UPGRADE_LINK); ?>" target="_blank"><input type="button" class="fpsml-button-primary" value="<?php esc_html_e('Upgrade to PRO', 'frontend-post-submission-manager-lite'); ?>"></a>
         </div>
     </div>

@@ -24,6 +24,7 @@ $form_details = maybe_unserialize($form_details);
             <a href="<?php echo site_url() . '?fpsml_form_preview=true&fpsml_form_alias=' . esc_attr($form_row->form_alias) . '&_wpnonce=' . wp_create_nonce('fpsml_preview_nonce'); ?>" class="fpsml-button-primary btn-preview" target="_blank">
                 <?php esc_html_e('Preview', 'frontend-post-submission-manager-lite'); ?>
             </a>
+            <div class="fpsml-compare-btn"><div class="compare-click">Free Vs Pro</div></div>
             <a href="<?php echo FPSML_UPGRADE_LINK; ?>" target="_blank" class="fpsml-button-primary btn-cancel"><?php esc_html_e('Upgrade to PRO', 'frontend-post-submission-manager-lite'); ?></a>
         </div>
 

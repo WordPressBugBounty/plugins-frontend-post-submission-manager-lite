@@ -7,6 +7,7 @@ if (!class_exists('FPSML_Frontend_Hooks')) {
 
         function __construct() {
             add_action('wp_footer', array($this, 'append_extra_html'));
+            
             add_action('the_content', array($this, 'append_custom_fields_before'), 10);
             add_action('the_content', array($this, 'append_custom_fields_after'), 11);
             add_action('template_redirect', array($this, 'generate_form_preview'));
@@ -17,6 +18,7 @@ if (!class_exists('FPSML_Frontend_Hooks')) {
             include(FPSML_PATH . '/includes/views/frontend/wp_footer.php');
         }
 
+        
         function register_frontend_assets() {
 
             wp_enqueue_style('fpsml-style', FPSML_URL . '/assets/css/fpsml-frontend-style.css', array(), FPSML_VERSION);

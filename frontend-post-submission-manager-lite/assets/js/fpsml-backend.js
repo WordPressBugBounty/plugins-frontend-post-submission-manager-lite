@@ -435,6 +435,15 @@ jQuery(document).ready(function ($) {
         $(this).parent().find('input[type="text"]').removeAttr('readonly');
     });
 
-
+    $(".compare-click").click(function () {
+        $(".fpsml-compare-panel").toggle();
+        $(".fpsml-wrap").toggleClass("fpsml-compare-overlay");
+      });
+      $(".close-panel").click(function () {
+        $(".fpsml-compare-panel").hide(); 
+         $(".fpsml-wrap").removeClass("fpsml-compare-overlay");
+      });
+     
+    
 
 });

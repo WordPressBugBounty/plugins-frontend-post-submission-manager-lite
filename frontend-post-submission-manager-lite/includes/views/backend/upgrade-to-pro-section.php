@@ -1,22 +1,84 @@
-<div class="wps-sectn-intro">
-    <h1>About <span>Plugin</span></h1>
-    <p><strong>Frontend Post Submission Manager</strong> is a premium <strong>WordPress Plugin</strong> which facilitates with the functionality to receive Posts or Any other Post Types from frontend with or without logging in along with <strong>Frontend Post Management Dashboard</strong>.</p>
-    <p>You can create unlimited forms with <strong>drag and drop form builder</strong>, add unlimited <strong>custom fields</strong> with various field types support such as <strong>Textfield, Textarea, Radio Button, Checkbox, Datepicker, Fileuploader</strong> and many more. Here are some quick features.</p>
-    <h3>Price: 25 USD</h3>
-    <div class="fpsml-add-wrap">
-        <a href="<?php echo esc_url(FPSML_UPGRADE_LINK); ?>" target="_blank"><input type="button" class="fpsml-button-primary" value="<?php esc_html_e('Upgrade to PRO', 'frontend-post-submission-manager-lite'); ?>"></a>
+<div class="fpsml-sectn-intro">
+    <div class="fpsml-about-section">
+        <div class="fpsml-heading-comp">
+            <h1>Upgrade To Pro</h1>
+        </div>
+        <p><strong>Frontend Post Submission Manager</strong> is a premium <strong>WordPress Plugin</strong> which facilitates with the functionality to receive Posts or Any other Post Types from frontend with or without logging in along with <strong>Frontend Post Management Dashboard</strong>.</p>
+        <p>You can create unlimited forms with <strong>drag and drop form builder</strong>, add unlimited <strong>custom fields</strong> with various field types support such as <strong>Textfield, Textarea, Radio Button, Checkbox, Datepicker, Fileuploader</strong> and many more. Here are some quick features.</p>
+        <h3>Price: 25 USD</h3>
+        <div class="fpsml-add-wrap">
+            <a href="<?php echo esc_url(FPSML_UPGRADE_LINK); ?>" target="_blank"><input type="button" class="fpsml-button-primary" value="<?php esc_html_e('Upgrade to PRO', 'frontend-post-submission-manager-lite'); ?>"></a>
+        </div>
+    </div>
+    <div class="fpsml-check-demo-section">
+        <h2>Check our Demos</h2>
+        <p>
+            <a href="https://demo.wpshuffle.com/frontend-post-submission-manager/submit-post/"><img loading="lazy" src="https://wpshuffle.com/wp-content/uploads/2020/05/submit-post.jpg" /></a>
+            <a href="https://demo.wpshuffle.com/frontend-post-submission-manager/wp-admin/"><img loading="lazy" src="https://wpshuffle.com/wp-content/uploads/2020/05/backend-demo.jpg" /></a>
+            <a href="https://demo.wpshuffle.com/frontend-post-submission-manager/templates-demo/"><img loading="lazy" src="https://wpshuffle.com/wp-content/uploads/2020/05/all-template-demo.jpg" /></a>
+            <a href="https://demo.wpshuffle.com/frontend-post-submission-manager/frontend-dashboard/"><img loading="lazy" src="https://wpshuffle.com/wp-content/uploads/2020/05/frontend-dashboard.jpg" /></a>
+            <a href="https://demo.wpshuffle.com/frontend-post-submission-manager/submit-product/"><img loading="lazy" src="https://wpshuffle.com/wp-content/uploads/2020/05/submit-product.jpg" /></a>
+            <a href="https://demo.wpshuffle.com/frontend-post-submission-manager/submit-an-event/"><img loading="lazy" src="https://wpshuffle.com/wp-content/uploads/2020/05/submit-an-event.jpg" /></a>
+        </p>
+    </div>
+    <div class="fpsml-feat-block">
+        <div class="fpsml-feat-img">
+            <img loading="lazy" src="https://wpshuffle.com/wp-content/uploads/2024/12/upgd-feat-1-new.png">
+        </div>
+    </div>
+    <div class="fpsml-feat-block">
+        <div class="fpsml-feat-img">
+            <img loading="lazy" src="https://wpshuffle.com/wp-content/uploads/2024/12/upgd-feat-2-new.png">
+        </div>
+    </div>
+    <div class="fpsml-feat-block">
+        <div class="fpsml-feat-img">
+            <a href="https://demo.wpshuffle.com/frontend-post-submission-manager/templates-demo/"><img loading="lazy" src="https://wpshuffle.com/wp-content/uploads/2024/12/upgd-feat-3-new.png"></a> 
+        </div>
+    </div>
+    <div class="fpsml-feat-block">
+        <div class="fpsml-feat-img">
+            <img loading="lazy" src="https://wpshuffle.com/wp-content/uploads/2024/12/upgd-feat-4-new.png">
+        </div>
+    </div>
+    <div class="fpsml-feat-block">
+        <div class="fpsml-feat-img">
+            <img loading="lazy" src="https://wpshuffle.com/wp-content/uploads/2024/12/upgd-feat-5-new.png">
+        </div>
+    </div>
+    <div class="fpsml-feat-block">
+        <div class="fpsml-feat-img">
+            <img loading="lazy" src="https://wpshuffle.com/wp-content/uploads/2024/12/upgd-feat-6-new.png">
+        </div>
+    </div>
+    <div class="fpsml-feat-block">
+        <div class="fpsml-feat-img">
+            <img loading="lazy" src="https://wpshuffle.com/wp-content/uploads/2024/12/upgd-feat-7-new.png">
+        </div>
     </div>
 
-    <h3>Check our Demos</h3>
-    <p>
-        <a href="https://demo.wpshuffle.com/frontend-post-submission-manager/submit-post/"><img loading="lazy" src="https://wpshuffle.com/wp-content/uploads/2020/05/submit-post.jpg" /></a>
-        <a href="https://demo.wpshuffle.com/frontend-post-submission-manager/wp-admin/"><img loading="lazy" src="https://wpshuffle.com/wp-content/uploads/2020/05/backend-demo.jpg" /></a>
-        <a href="https://demo.wpshuffle.com/frontend-post-submission-manager/templates-demo/"><img loading="lazy" src="https://wpshuffle.com/wp-content/uploads/2020/05/all-template-demo.jpg" /></a>
-        <a href="https://demo.wpshuffle.com/frontend-post-submission-manager/frontend-dashboard/"><img loading="lazy" src="https://wpshuffle.com/wp-content/uploads/2020/05/frontend-dashboard.jpg" /></a>
-        <a href="https://demo.wpshuffle.com/frontend-post-submission-manager/submit-product/"><img loading="lazy" src="https://wpshuffle.com/wp-content/uploads/2020/05/submit-product.jpg" /></a>
-        <a href="https://demo.wpshuffle.com/frontend-post-submission-manager/submit-an-event/"><img loading="lazy" src="https://wpshuffle.com/wp-content/uploads/2020/05/submit-an-event.jpg" /></a>
-    </p>
-    <div class="wps-feat-block">
+
+ 
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- old markup -->
+     <!-- <div class="wps-feat-block">
         <div class="wps-feat-img">
             <img loading="lazy" src="https://wpshuffle.com/wp-content/uploads/2020/05/frontned-post-subsmission-manager-feature-1.png">
         </div>
@@ -121,5 +183,4 @@
             <img loading="lazy" src="https://wpshuffle.com/wp-content/uploads/2020/05/frontned-post-subsmission-manager-feature-quick-features.png">
         </div>
         <p>Our plugin is translation ready, all devices friendly and we do provide outstanding support.</p>
-    </div>
-</div>
+    </div> -->

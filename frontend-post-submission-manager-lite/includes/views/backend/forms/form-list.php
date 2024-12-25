@@ -9,6 +9,7 @@ defined('ABSPATH') or die('No script kiddies please!!');
         </h1>
         <div class="fpsml-add-wrap">
             <a href="<?php echo esc_url(FPSML_UPGRADE_LINK); ?>" target="_blank" class="fpsml-pro-feature-btn"><input type="button" class="fpsml-button-primary" value="<?php esc_html_e('Add new form', 'frontend-post-submission-manager-lite'); ?>"></a>
+            <div class="fpsml-compare-btn"><div class="compare-click">Free Vs Pro</div></div>
         </div>
     </div>
 <?php include(FPSML_PATH.'/includes/views/backend/upgrade-banner.php');?>

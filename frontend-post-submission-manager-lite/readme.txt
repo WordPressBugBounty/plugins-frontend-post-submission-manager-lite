@@ -3,9 +3,9 @@ Contributors: wpshuffle
 Donate link: http://wpshuffle.com/
 Tags: frontend posting, frontend post, guest posting, user post, anonymous post
 Requires at least: 5.5
-Tested up to: 6.6
+Tested up to: 6.7
 Requires PHP: 7.0
-Stable tag: 1.2.3
+Stable tag: 1.2.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -148,6 +148,10 @@ No you won't need to design the forms because we have 5 pre designed form templa
 9. Frontend Post Submission Backend Security Settings
 
 == Changelog ==
+= 1.2.4 = 
+* Fixed text domain warning message
+* Updated upgrade images and added free vs pro comparison
+
 = 1.2.3 = 
 * Fixed security vulnerability reported by Wordfence
 
@@ -224,7 +228,7 @@ No you won't need to design the forms because we have 5 pre designed form templa
 * Updated upgrade section
 
 = 1.0.0 =
-* Initial Commit to Repository 
+* Initial Commit to Repository
 
 == Upgrade Notice ==
 There is a new version available for the plugin. Please update to get the latest update and bug fixes for this plugin.
