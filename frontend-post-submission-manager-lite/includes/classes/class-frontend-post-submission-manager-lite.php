@@ -15,7 +15,7 @@ if (!class_exists('Frontend_Post_Submission_Manager_Lite')) {
          *
          * @var string
          */
-        public $version = '1.2.4';
+        public $version = '1.2.5';
 
         /**
          * The single instance of the class.
@@ -120,19 +120,7 @@ if (!class_exists('Frontend_Post_Submission_Manager_Lite')) {
             global $wpdb;
             defined('FPSML_VERSION') or define('FPSML_VERSION', $this->version);
             defined('FPSML_FORM_TABLE') or define('FPSML_FORM_TABLE', $wpdb->prefix . 'fpsm_forms');
-            $custom_field_type_list = array(
-                'textfield' => array('label' => esc_html__('Texfield', 'frontend-post-submission-manager-lite'), 'icon' => 'fas fa-edit'),
-                'textarea' => array('label' => esc_html__('Textarea', 'frontend-post-submission-manager-lite'), 'icon' => 'fas fa-expand'),
-            );
-            /**
-             * Filters custom field type list
-             *
-             * @param array $custom_field_type_list
-             *
-             * @since 1.0.0
-             */
-            $custom_field_type_list = apply_filters('fpsml_custom_field_type_list', $custom_field_type_list);
-            defined('FPSML_CUSTOM_FIELD_TYPE_LIST') or define('FPSML_CUSTOM_FIELD_TYPE_LIST', $custom_field_type_list);
+            
         }
 
         function includes() {
