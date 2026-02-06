@@ -58,7 +58,7 @@ jQuery(document).ready(function ($) {
                         }
                     }
                 },
-                onProgress: function (id, fileName, loaded, total) {},
+                onProgress: function (id, fileName, loaded, total) { },
                 onComplete: function (id, fileName, responseJSON) {
 
                     if (responseJSON.success) {
@@ -81,7 +81,7 @@ jQuery(document).ready(function ($) {
                             // tinyMCE.get('fpsml_login_require_form').triggerSave();
                             tinyMCE.get(tinymce_id).execCommand('mceInsertContent', false, insert_content_html);
                         } else {
-                            var data = {media_url: responseJSON.media_url, media_id: responseJSON.media_id, media_name: responseJSON.media_name, media_key: responseJSON.media_key}
+                            var data = { media_url: responseJSON.media_url, media_id: responseJSON.media_id, media_name: responseJSON.media_name, media_key: responseJSON.media_key }
 
                             var file_preview_template = wp.template('upload-preview');
                             if (multiple_upload) {
@@ -109,11 +109,11 @@ jQuery(document).ready(function ($) {
 
 
                 },
-                onCancel: function (id, fileName) {},
-                onError: function (id, fileName, xhr) {},
+                onCancel: function (id, fileName) { },
+                onError: function (id, fileName, xhr) { },
                 messages: {
-                    typeError: (extensions_error == '')?translation_strings.typeError:extensions_error,
-                    sizeError: (sizeLimit_error!='')?sizeLimit_error:translation_strings.sizeError,
+                    typeError: (extensions_error == '') ? translation_strings.typeError : extensions_error,
+                    sizeError: (sizeLimit_error != '') ? sizeLimit_error : translation_strings.sizeError,
                     minSizeError: translation_strings.minSizeError,
                     emptyError: translation_strings.emptyError,
                     onLeave: translation_strings.onLeave,
@@ -134,8 +134,9 @@ jQuery(document).ready(function ($) {
             var in_selector = $(this);
             if (in_selector.is(':visible') && in_selector.html() != '') {
                 $('html,body').animate({
-                    scrollTop: in_selector.closest('.fpsml-field-wrap').offset().top - 100},
-                        'slow');
+                    scrollTop: in_selector.closest('.fpsml-field-wrap').offset().top - 100
+                },
+                    'slow');
                 return false;
             }
             ;
@@ -161,8 +162,7 @@ jQuery(document).ready(function ($) {
         var selector = $(this);
         var media_id = $(this).data('media-id');
         var media_key = $(this).data('media-key');
-        var edit = $(this).data('edit');
-        if (edit == 'no') {
+        if (media_key) {
             $.ajax({
                 type: 'post',
                 url: fpsml_js_obj.ajax_url,
@@ -344,7 +344,7 @@ jQuery(document).ready(function ($) {
         $(this).toggleClass('checked');
     });
 
-    
+
     /**
      * Clear error
      */
@@ -360,12 +360,12 @@ jQuery(document).ready(function ($) {
     /*
      * Are you sure js 
      */
-    
+
     if (!fpsml_js_obj.fpsml_settings.disable_are_you_sure_js) {
         $('.fpsml-front-form').areYouSure(
-                {
-                    message: translation_strings.are_your_sure
-                }
+            {
+                message: translation_strings.are_your_sure
+            }
         );
     }
 
