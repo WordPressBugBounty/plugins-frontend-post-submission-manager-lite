@@ -5,7 +5,7 @@ defined('ABSPATH') or die('No script kiddies please');
 /*
   Plugin Name: Frontend Post Submission Manager Lite
   Description: A plugin to submit and manage WordPress posts from frontend with or without logging in
-  Version:     1.2.7
+  Version:     1.2.8
   Author:      WP Shuffle
   Author URI:  http://wpshuffle.com
   Plugin URI: http://wpshuffle.com/wordpress-plugins/frontend-post-submission-manager-lite

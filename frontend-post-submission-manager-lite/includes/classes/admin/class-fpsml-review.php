@@ -10,7 +10,7 @@ if (!class_exists('FPSML_Review')) {
         function save_review_notice_preference() {
             if (isset($_POST['fpsml_hide_review_notice'], $_POST['fpsml_hide_review_notice_field']) && $_POST['fpsml_hide_review_notice'] == 1 && wp_verify_nonce($_POST['fpsml_hide_review_notice_field'], 'fpsml_hide_review_notice')) {
                 update_user_meta(get_current_user_id(), 'fpsml_hide_review_notice', true);
-                wp_redirect(add_query_arg(array('fpsml_review_notice_saved' => '1'), wp_get_referer()));
+                wp_safe_redirect(add_query_arg(array('fpsml_review_notice_saved' => '1'), wp_get_referer()));
             }
         }
 

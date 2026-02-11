@@ -87,7 +87,7 @@ if (!class_exists('FPSML_Shortcode')) {
                 $page_viewed = basename($_SERVER['REQUEST_URI']);
 
                 if ($page_viewed == "wp-login.php" && $_SERVER['REQUEST_METHOD'] == 'GET') {
-                    wp_redirect($login_page);
+                    wp_safe_redirect($login_page);
                     exit;
                 }
             }
@@ -96,7 +96,7 @@ if (!class_exists('FPSML_Shortcode')) {
         function login_failed() {
             if (isset($_POST['requested_page'])) {
                 $login_page = esc_url($_POST['requested_page']);
-                wp_redirect($login_page . '?login=failed');
+                wp_safe_redirect($login_page . '?login=failed');
                 exit;
             }
         }
@@ -105,7 +105,7 @@ if (!class_exists('FPSML_Shortcode')) {
             if (isset($_POST['requested_page'])) {
                 $login_page = esc_url($_POST['requested_page']);
                 if ($username == "" || $password == "") {
-                    wp_redirect($login_page . "?login=empty");
+                    wp_safe_redirect($login_page . "?login=empty");
                     exit;
                 } else {
 
@@ -171,19 +171,19 @@ if (!class_exists('FPSML_Shortcode')) {
 
                     /* Check if captcha is filled */
                     if (empty($captcha)) {
-                        wp_redirect(esc_url($_POST['redirect_to']) . '/?login=captcha_error');
+                        wp_safe_redirect(esc_url($_POST['redirect_to']) . '/?login=captcha_error');
                         exit;
                     } else {
 
                         $secret_key = (!empty($form_details['security']['secret_key'])) ? $form_details['security']['secret_key'] : '';
                         $captcha_response = wp_remote_get("https://www.google.com/recaptcha/api/siteverify?secret=" . $secret_key . "&response=" . $captcha);
                         if (is_wp_error($captcha_response)) {
-                            wp_redirect(esc_url($_POST['redirect_to']) . '/?login=captcha_error');
+                            wp_safe_redirect(esc_url($_POST['redirect_to']) . '/?login=captcha_error');
                             exit;
                         } else {
                             $captcha_response = json_decode($captcha_response['body']);
                             if ($captcha_response->success == false) {
-                                wp_redirect(esc_url($_POST['redirect_to']) . '/?login=captcha_error');
+                                wp_safe_redirect(esc_url($_POST['redirect_to']) . '/?login=captcha_error');
                                 exit;
                             }
                         }

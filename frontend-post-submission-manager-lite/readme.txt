@@ -5,7 +5,7 @@ Tags: frontend posting, frontend post, guest posting, user post, anonymous post
 Requires at least: 5.5
 Tested up to: 6.9
 Requires PHP: 7.0
-Stable tag: 1.2.7
+Stable tag: 1.2.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -134,6 +134,9 @@ No you won't need to design the forms because we have 5 pre designed form templa
 9. Frontend Post Submission Backend Security Settings
 
 == Changelog ==
+= 1.2.8 = 
+* Fixed some security issues
+
 = 1.2.7 = 
 * Fixed some security issues
 
