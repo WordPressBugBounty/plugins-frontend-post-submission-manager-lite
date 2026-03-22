@@ -14,13 +14,13 @@
     <div class="compare-wrap-all">
         <div class="fpsml-compare-row fpsml--flex fpsml--flex-w">
             <div class="fpsml-feat-col">
-                <p>Unlimited Forms</p>
+                <p>Included Forms</p>
             </div>
             <div class="fpsml-feat-col">
-                <p class="no"><i class="fa fa-times" aria-hidden="true"></i></p>
+                <p>2 default forms</p>
             </div>
             <div class="fpsml-feat-col">
-                <p class="yes"><i class="fa fa-check" aria-hidden="true"></i></p>
+                <p>Unlimited</p>
             </div>
         </div>
         <div class="fpsml-compare-row fpsml--flex fpsml--flex-w">
@@ -47,7 +47,7 @@
         </div>
         <div class="fpsml-compare-row fpsml--flex fpsml--flex-w">
             <div class="fpsml-feat-col">
-                <p>Guest Post Support</p>
+                <p>Guest and Login Required Forms</p>
             </div>
             <div class="fpsml-feat-col">
                 <p class="yes"><i class="fa fa-check" aria-hidden="true"></i></p>
@@ -88,6 +88,28 @@
                 
             </div>
         </div> 
+        <div class="fpsml-compare-row fpsml--flex fpsml--flex-w">
+            <div class="fpsml-feat-col">
+                <p>Standard Post Support</p>
+            </div>
+            <div class="fpsml-feat-col">
+                <p class="yes"><i class="fa fa-check" aria-hidden="true"></i></p>
+            </div>
+            <div class="fpsml-feat-col">
+                <p class="yes"><i class="fa fa-check" aria-hidden="true"></i></p>
+            </div>
+        </div>
+        <div class="fpsml-compare-row fpsml--flex fpsml--flex-w">
+            <div class="fpsml-feat-col">
+                <p>Standard Taxonomies for Posts</p>
+            </div>
+            <div class="fpsml-feat-col">
+                <p class="yes"><i class="fa fa-check" aria-hidden="true"></i></p>
+            </div>
+            <div class="fpsml-feat-col">
+                <p class="yes"><i class="fa fa-check" aria-hidden="true"></i></p>
+            </div>
+        </div>
         <div class="fpsml-compare-row fpsml--flex fpsml--flex-w">
             <div class="fpsml-feat-col">
                 <p>Post Status Specific Submit</p>
@@ -145,10 +167,10 @@
         </div>
         <div class="fpsml-compare-row fpsml--flex fpsml--flex-w">
             <div class="fpsml-feat-col">
-                <p>Default Taxonomies and Custom Taxonomies Support</p>
+                <p>Admin and User Notifications</p>
             </div>
             <div class="fpsml-feat-col">
-                <p class="no"><i class="fa fa-times" aria-hidden="true"></i></p>
+                <p class="yes"><i class="fa fa-check" aria-hidden="true"></i></p>
             </div>
             <div class="fpsml-feat-col">
                 <p class="yes"><i class="fa fa-check" aria-hidden="true"></i></p>
@@ -156,10 +178,10 @@
         </div>
         <div class="fpsml-compare-row fpsml--flex fpsml--flex-w">
             <div class="fpsml-feat-col">
-                <p>Integrated with Post Views Counter</p>
+                <p>Frontend Submission Preview</p>
             </div>
             <div class="fpsml-feat-col">
-                <p class="no"><i class="fa fa-times" aria-hidden="true"></i></p>
+                <p class="yes"><i class="fa fa-check" aria-hidden="true"></i></p>
             </div>
             <div class="fpsml-feat-col">
                 <p class="yes"><i class="fa fa-check" aria-hidden="true"></i></p>
@@ -167,40 +189,29 @@
         </div> 
         <div class="fpsml-compare-row fpsml--flex fpsml--flex-w">
             <div class="fpsml-feat-col">
-                <p>Post Status Specific Submit Buttons</p>
+                <p>Google Captcha</p>
             </div>
             <div class="fpsml-feat-col">
-                <p class="no"><i class="fa fa-times" aria-hidden="true"></i></p>
+                <p class="yes"><i class="fa fa-check" aria-hidden="true"></i></p>
             </div>
             <div class="fpsml-feat-col">
                 <p class="yes"><i class="fa fa-check" aria-hidden="true"></i></p>
             </div>
         </div> 
-        <div class="fpsml-compare-row fpsml--flex fpsml--flex-w">
-            <div class="fpsml-feat-col">
-                <p>Custom Post Types Support</p>
-            </div>
-            <div class="fpsml-feat-col">
-                <p class="no"><i class="fa fa-times" aria-hidden="true"></i></p>
-            </div>
-            <div class="fpsml-feat-col">
-                <p class="yes"><i class="fa fa-check" aria-hidden="true"></i></p>
-            </div>
-        </div>
-        <div class="fpsml-compare-row fpsml--flex fpsml--flex-w">
-            <div class="fpsml-feat-col">
-                <p>Secure Form Submission with Google Captcha Integrated</p>
-            </div>
-            <div class="fpsml-feat-col">
-                <p class="yes"><i class="fa fa-check" aria-hidden="true"></i></p>
-            </div>
-            <div class="fpsml-feat-col">
-                <p class="yes"><i class="fa fa-check" aria-hidden="true"></i></p>
-            </div>
-        </div>
         <div class="fpsml-compare-row fpsml--flex fpsml--flex-w">
             <div class="fpsml-feat-col">
                 <p>Layout Customization Options</p>
+            </div>
+            <div class="fpsml-feat-col">
+                <p class="no"><i class="fa fa-times" aria-hidden="true"></i></p>
+            </div>
+            <div class="fpsml-feat-col">
+                <p class="yes"><i class="fa fa-check" aria-hidden="true"></i></p>
+            </div>
+        </div>
+        <div class="fpsml-compare-row fpsml--flex fpsml--flex-w">
+            <div class="fpsml-feat-col">
+                <p>Advanced Workflow Controls</p>
             </div>
             <div class="fpsml-feat-col">
                 <p class="no"><i class="fa fa-times" aria-hidden="true"></i></p>

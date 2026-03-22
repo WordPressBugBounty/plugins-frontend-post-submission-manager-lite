@@ -15,7 +15,7 @@ if (!class_exists('Frontend_Post_Submission_Manager_Lite')) {
          *
          * @var string
          */
-        public $version = '1.2.7';
+        public $version = '1.2.9';
 
         /**
          * The single instance of the class.

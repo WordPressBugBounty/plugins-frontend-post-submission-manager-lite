@@ -5,16 +5,16 @@ Tags: frontend posting, frontend post, guest posting, user post, anonymous post
 Requires at least: 5.5
 Tested up to: 6.9
 Requires PHP: 7.0
-Stable tag: 1.2.8
+Stable tag: 1.2.9
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Frontend Post Submission with or without Login, 5 PreDesigned Form Templates, Add Unlimited Custom Fields, Google Captcha Security, Post Notifications
+Frontend post submission with or without login, 5 pre-designed templates, simple custom fields, Google Captcha security, and post notifications
 
 == Description ==
-<strong>Frontend Post Submission Manager Lite</strong> is a free, powerful and user-friendly Frontend Posting WordPress plugin designed to simplify the process of submitting posts directly from the frontend of your website. Whether your users are logged in or not, this plugin empowers them to create and submit posts effortlessly, enhancing user engagement and content generation on your site.
+<strong>Frontend Post Submission Manager Lite</strong> is a free and user-friendly frontend posting plugin for WordPress. It helps you publish complete frontend submission workflows for standard WordPress posts, with or without login, so you can collect guest posts and community submissions without building a custom system.
 
-You can configure available forms with <strong>drag and drop form builder, add unlimited custom fields</strong> with various field type supports.
+Lite is designed to be useful immediately for a small site, blog, or community. It includes guest and login-required submission forms, frontend preview, notifications, and simple custom fields so you can launch quickly without custom development.
 
 https://www.youtube.com/watch?v=oOd3kbQjrKg
 
@@ -23,8 +23,8 @@ https://www.youtube.com/watch?v=oOd3kbQjrKg
 📋 <strong>Guest Post Form and Login Required Form with Drag and Drop Form Builder</strong>
 Create custom submission forms effortlessly using a user-friendly drag-and-drop builder.
 
-🛠️ <strong>Unlimited Custom Fields with Various Types</strong>
-Collect diverse data with unlimited custom fields and various field types.
+🛠️ <strong>Unlimited Simple Custom Fields</strong>
+Collect extra submission data with simple custom fields such as textfield and textarea.
 
 👁️‍🗨️ <strong>Frontend and Backend Display</strong>
 View custom field data both on the frontend and backend for easy access.
@@ -68,7 +68,21 @@ Optimized for all devices and browsers for universal accessibility.
 🌐 <strong>Translation Ready</strong>
 Expand your reach with translation-ready features for global audiences.
 
-= Check Frontend Post Submission Manager Features = 
+= Lite is Best For =
+* Guest post submission on a blog or magazine site
+* Community article submission
+* Logged-in contributor submission
+* A simple frontend posting workflow for standard WordPress posts
+
+= Upgrade to Pro When You Need =
+* Unlimited forms
+* Frontend post management dashboard
+* Advanced custom field types such as select, checkbox, radio, number, email, datepicker, file uploader, URL, tel, YouTube, hidden, and WYSIWYG editor
+* Custom post types support
+* Custom taxonomies support
+* Post submission limits and advanced workflow controls
+
+= What Is Available In Pro = 
 * Create Unlimited Forms with different Restrictions
 * 20+ Pre Designed Beautiful Form Templates
 * Custom field with various field types
@@ -84,8 +98,6 @@ Expand your reach with translation-ready features for global audiences.
  - URL
  - Tel
  - Youtube Embed
-* Custom Post Types Support
-* Custom Taxonomies Support
 * Frontend Post Management Dashboard
 * Direct Image upload to Post Content Editor with or without logging in
 
@@ -113,7 +125,7 @@ Our plugin provides you the form which you can use in the frontend through short
 Yes, you can use our plugin for both Login and Without Login require forms.
 
 = Can I add custom fields? =
-Yes you can add unlimited custom fields.
+Yes. Lite supports unlimited simple custom fields such as textfield and textarea. Pro adds advanced field types.
 
 = Do I need to design the form? = 
 No you won't need to design the forms because we have 5 pre designed form templates
@@ -134,6 +146,11 @@ No you won't need to design the forms because we have 5 pre designed form templa
 9. Frontend Post Submission Backend Security Settings
 
 == Changelog ==
+= 1.2.9 =
+* Refined Lite positioning and upgrade messaging
+* Updated free vs pro comparison copy for better accuracy
+* Improved readme wording to better reflect Lite capabilities
+
 = 1.2.8 = 
 * Fixed some security issues
 
@@ -230,8 +247,5 @@ No you won't need to design the forms because we have 5 pre designed form templa
 
 == Upgrade Notice ==
 There is a new version available for the plugin. Please update to get the latest update and bug fixes for this plugin.
-
-
-
 
 

@@ -3,8 +3,8 @@
         <div class="fpsml-heading-comp">
             <h1>Upgrade To Pro</h1>
         </div>
-        <p><strong>Frontend Post Submission Manager</strong> is a premium <strong>WordPress Plugin</strong> which facilitates with the functionality to receive Posts or Any other Post Types from frontend with or without logging in along with <strong>Frontend Post Management Dashboard</strong>.</p>
-        <p>You can create unlimited forms with <strong>drag and drop form builder</strong>, add unlimited <strong>custom fields</strong> with various field types support such as <strong>Textfield, Textarea, Radio Button, Checkbox, Datepicker, Fileuploader</strong> and many more. Here are some quick features.</p>
+        <p><strong>Frontend Post Submission Manager Lite</strong> is built to help you launch a complete frontend submission workflow for standard posts. Upgrade to <strong>Pro</strong> when you need more scale, more field types, and more advanced workflow controls.</p>
+        <p>Pro adds <strong>unlimited forms</strong>, <strong>frontend post management dashboard</strong>, <strong>custom post type and custom taxonomy support</strong>, and advanced field types such as <strong>Select Dropdown, Checkbox, Radio Button, Datepicker, File Uploader</strong> and more.</p>
         <h3>Price: 25 USD</h3>
         <div class="fpsml-add-wrap">
             <a href="<?php echo esc_url(FPSML_UPGRADE_LINK); ?>" target="_blank"><input type="button" class="fpsml-button-primary" value="<?php esc_html_e('Upgrade to PRO', 'frontend-post-submission-manager-lite'); ?>"></a>
