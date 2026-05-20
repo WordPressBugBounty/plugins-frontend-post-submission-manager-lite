@@ -133,17 +133,24 @@ if (!class_exists('FPSML_Shortcode')) {
              * Don't add this in default login page
              */
             if (!$this->is_login_page()) {
+                global $fpsml_library_obj;
                 global $fpsml_form_details;
                 global $fpsml_form_alias;
                 if (!empty($fpsml_form_details['security']['login_form_captcha'])) {
-                    $site_key = (!empty($fpsml_form_details['security']['site_key'])) ? esc_attr($fpsml_form_details['security']['site_key']) : '';
+                    $captcha_provider = $fpsml_library_obj->get_captcha_provider($fpsml_form_details);
+                    $site_key = $fpsml_library_obj->get_captcha_site_key($fpsml_form_details);
                     if (!empty($site_key)) {
                         ob_start();
                         ?>
                         <div class="fpsml-captcha-wrap">
                             <label><?php echo (!empty($fpsml_form_details['security']['captcha_label'])) ? esc_attr($fpsml_form_details['security']['captcha_label']) : ''; ?></label>
                             <div class="fpsml-field">
-                                <div class="g-recaptcha" data-sitekey="<?php echo esc_attr($site_key); ?>"></div>
+                                <script type="text/javascript" src="<?php echo esc_url($fpsml_library_obj->get_captcha_script_url($captcha_provider)); ?>" async defer></script>
+                                <?php if ($captcha_provider === 'turnstile') { ?>
+                                    <div class="cf-turnstile" data-sitekey="<?php echo esc_attr($site_key); ?>"></div>
+                                <?php } else { ?>
+                                    <div class="g-recaptcha" data-sitekey="<?php echo esc_attr($site_key); ?>"></div>
+                                <?php } ?>
                             </div>
                         </div>
                         <input type="hidden" name="fpsml_login_check" value="yes"/>
@@ -167,25 +174,19 @@ if (!class_exists('FPSML_Shortcode')) {
                 $form_details = maybe_unserialize($form_row->form_details);
 
                 if (!empty($form_details['security']['login_form_captcha'])) {
-                    $captcha = sanitize_text_field($_REQUEST['g-recaptcha-response']);
+                    $captcha_provider = $fpsml_library_obj->get_captcha_provider($form_details);
+                    $captcha_response_field = $fpsml_library_obj->get_captcha_response_field($captcha_provider);
+                    $captcha = (!empty($_REQUEST[$captcha_response_field])) ? sanitize_text_field(wp_unslash($_REQUEST[$captcha_response_field])) : '';
 
                     /* Check if captcha is filled */
                     if (empty($captcha)) {
                         wp_safe_redirect(esc_url($_POST['redirect_to']) . '/?login=captcha_error');
                         exit;
                     } else {
-
-                        $secret_key = (!empty($form_details['security']['secret_key'])) ? $form_details['security']['secret_key'] : '';
-                        $captcha_response = wp_remote_get("https://www.google.com/recaptcha/api/siteverify?secret=" . $secret_key . "&response=" . $captcha);
-                        if (is_wp_error($captcha_response)) {
+                        $secret_key = $fpsml_library_obj->get_captcha_secret_key($form_details);
+                        if (!$fpsml_library_obj->verify_captcha_response($captcha_provider, $captcha, $secret_key)) {
                             wp_safe_redirect(esc_url($_POST['redirect_to']) . '/?login=captcha_error');
                             exit;
-                        } else {
-                            $captcha_response = json_decode($captcha_response['body']);
-                            if ($captcha_response->success == false) {
-                                wp_safe_redirect(esc_url($_POST['redirect_to']) . '/?login=captcha_error');
-                                exit;
-                            }
                         }
                     }
                 }

@@ -5,11 +5,11 @@ Tags: frontend posting, frontend post, guest posting, user post, anonymous post
 Requires at least: 5.5
 Tested up to: 6.9
 Requires PHP: 7.0
-Stable tag: 1.2.9
+Stable tag: 1.3.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Frontend post submission with or without login, 5 pre-designed templates, simple custom fields, Google Captcha security, and post notifications
+Frontend post submission with or without login, 5 pre-designed templates, simple custom fields, Google reCAPTCHA and Cloudflare Turnstile security, and post notifications
 
 == Description ==
 <strong>Frontend Post Submission Manager Lite</strong> is a free and user-friendly frontend posting plugin for WordPress. It helps you publish complete frontend submission workflows for standard WordPress posts, with or without login, so you can collect guest posts and community submissions without building a custom system.
@@ -35,8 +35,8 @@ Choose from five visually appealing templates to enhance form aesthetics.
 🌐 <strong>Guest Post Support</strong>
 Encourage guest contributors to submit content and expand engagement.
 
-🔒 <strong>Secure Form Submission with Google Captcha</strong>
-Protect your site from spam with secure Google Captcha integration.
+🔒 <strong>Secure Form Submission with Captcha Protection</strong>
+Protect your site from spam with Google reCAPTCHA or Cloudflare Turnstile integration.
 
 📧 <strong>Admin and User Notification Configurations</strong>
 Customize notifications for admin and users to stay informed.
@@ -146,6 +146,9 @@ No you won't need to design the forms because we have 5 pre designed form templa
 9. Frontend Post Submission Backend Security Settings
 
 == Changelog ==
+= 1.3.0 = 
+* Added Cloudflare Turnstile captcha support
+
 = 1.2.9 =
 * Refined Lite positioning and upgrade messaging
 * Updated free vs pro comparison copy for better accuracy
@@ -247,5 +250,4 @@ No you won't need to design the forms because we have 5 pre designed form templa
 
 == Upgrade Notice ==
 There is a new version available for the plugin. Please update to get the latest update and bug fixes for this plugin.
-
 

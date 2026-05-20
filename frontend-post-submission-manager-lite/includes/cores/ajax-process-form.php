@@ -72,25 +72,18 @@ if ($this->admin_ajax_nonce_verify()) {
         }
 
         if (!empty($form_details['security']['frontend_form_captcha'])) {
-            $captcha = sanitize_text_field($form_data['g-recaptcha-response']); // get the captchaResponse parameter sent from our ajax
+            $captcha_provider = $fpsml_library_obj->get_captcha_provider($form_details);
+            $captcha_response_field = $fpsml_library_obj->get_captcha_response_field($captcha_provider);
+            $captcha = (!empty($form_data[$captcha_response_field])) ? sanitize_text_field($form_data[$captcha_response_field]) : '';
             $required = esc_html__('This field is required', 'frontend-post-submission-manager-lite');
             if (empty($captcha)) {
                 $error_details['captcha'] = (!empty($form_details['security']['error_message'])) ? esc_attr($form_details['security']['error_message']) : $required_message;
                 $error_flag = 1;
             } else {
-
-                $secret_key = (!empty($form_details['security']['secret_key'])) ? esc_attr($form_details['security']['secret_key']) : '';
-                $captcha_response = wp_remote_get("https://www.google.com/recaptcha/api/siteverify?secret=" . $secret_key . "&response=" . $captcha);
-
-                if (is_wp_error($captcha_response)) {
-                    $error_details['security'] = esc_html__('Captcha Validation failed.', 'frontend-post-submission-manager-lite');
+                $secret_key = $fpsml_library_obj->get_captcha_secret_key($form_details);
+                if (!$fpsml_library_obj->verify_captcha_response($captcha_provider, $captcha, $secret_key)) {
+                    $error_details['security'] = (!empty($form_details['security']['error_message'])) ? esc_attr($form_details['security']['error_message']) : $required;
                     $error_flag = 1;
-                } else {
-                    $captcha_response = json_decode($captcha_response['body']);
-                    if ($captcha_response->success == false) {
-                        $error_details['security'] = (!empty($form_details['security']['error_message'])) ? esc_attr($form_details['security']['error_message']) : $required_message;
-                        $error_flag = 1;
-                    }
                 }
             }
         }
