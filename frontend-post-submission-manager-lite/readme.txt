@@ -3,9 +3,9 @@ Contributors: wpshuffle
 Donate link: http://wpshuffle.com/
 Tags: frontend posting, frontend post, guest posting, user post, anonymous post
 Requires at least: 5.5
-Tested up to: 6.9
+Tested up to: 7.0
 Requires PHP: 7.0
-Stable tag: 1.3.0
+Stable tag: 1.3.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -146,6 +146,9 @@ No you won't need to design the forms because we have 5 pre designed form templa
 9. Frontend Post Submission Backend Security Settings
 
 == Changelog ==
+= 1.3.1 = 
+* * Fixed file upload authorization so guest uploads remain available for guest forms while login-required forms now require an authenticated user.
+
 = 1.3.0 = 
 * Added Cloudflare Turnstile captcha support
 
@@ -249,5 +252,5 @@ No you won't need to design the forms because we have 5 pre designed form templa
 * Initial Commit to Repository
 
 == Upgrade Notice ==
-There is a new version available for the plugin. Please update to get the latest update and bug fixes for this plugin.
+There is a new version available for the plugin. Please update to get the latest update and bug fixes for this plugin. 
 

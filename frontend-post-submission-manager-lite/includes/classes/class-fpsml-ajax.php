@@ -28,11 +28,26 @@ if (!class_exists('FPSML_Ajax')) {
         function file_upload_action() {
             if ($this->admin_ajax_nonce_verify()) {
 
-                $form_alias = sanitize_text_field($_GET['form_alias']);
-                $field_name = sanitize_text_field($_GET['field_name']);
+                $form_alias = (!empty($_GET['form_alias'])) ? sanitize_text_field(wp_unslash($_GET['form_alias'])) : '';
+                $field_name = (!empty($_GET['field_name'])) ? sanitize_text_field(wp_unslash($_GET['field_name'])) : '';
+                if (empty($form_alias) || empty($field_name)) {
+                    $this->upload_error_response(esc_html__('Invalid upload request.', 'frontend-post-submission-manager-lite'));
+                }
                 global $fpsml_library_obj;
                 $form_row = $fpsml_library_obj->get_form_row_by_alias($form_alias);
+                if (empty($form_row)) {
+                    $this->upload_error_response(esc_html__('Invalid upload request.', 'frontend-post-submission-manager-lite'));
+                }
+                if ($form_row->form_type == 'login_require' && !is_user_logged_in()) {
+                    $this->upload_error_response(esc_html__('Unauthorized upload request.', 'frontend-post-submission-manager-lite'));
+                }
                 $form_details = maybe_unserialize($form_row->form_details);
+                if (empty($form_details['form']['fields'][$field_name]) || empty($form_details['form']['fields'][$field_name]['show_on_form'])) {
+                    $this->upload_error_response(esc_html__('Invalid upload field.', 'frontend-post-submission-manager-lite'));
+                }
+                if ($field_name != 'post_image') {
+                    $this->upload_error_response(esc_html__('Invalid upload field.', 'frontend-post-submission-manager-lite'));
+                }
                 $field_details = $form_details['form']['fields'][$field_name];
                 $default_allowed_extensions = array('jpg', 'jpeg', 'png', 'gif', 'bmp', 'JPG', 'JPEG', 'PNG', 'BMP');
                 /**
@@ -68,6 +83,15 @@ if (!class_exists('FPSML_Ajax')) {
             } else {
                 $this->permission_denied();
             }
+        }
+
+        function upload_error_response($message, $status_code = 403) {
+            status_header($status_code);
+            echo wp_json_encode(array(
+                'success' => false,
+                'error' => $message
+            ));
+            die();
         }
 
         /**
