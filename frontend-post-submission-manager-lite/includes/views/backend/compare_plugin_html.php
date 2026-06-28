@@ -14,7 +14,7 @@
     <div class="compare-wrap-all">
         <div class="fpsml-compare-row fpsml--flex fpsml--flex-w">
             <div class="fpsml-feat-col">
-                <p>Included Forms</p>
+                <p>Submission Forms</p>
             </div>
             <div class="fpsml-feat-col">
                 <p>2 default forms</p>
@@ -36,7 +36,120 @@
         </div>
         <div class="fpsml-compare-row fpsml--flex fpsml--flex-w">
             <div class="fpsml-feat-col">
-                <p>Drag and Drop form Builder</p>
+                <p>Ready-Made Form Templates</p>
+            </div>
+            <div class="fpsml-feat-col">
+                
+                <p>5</p>
+                
+            </div>
+            <div class="fpsml-feat-col">
+                
+                <p>30+</p>
+                
+            </div>
+        </div> 
+        <div class="fpsml-compare-row fpsml--flex fpsml--flex-w">
+            <div class="fpsml-feat-col">
+                <p>Custom Field Types</p>
+            </div>
+
+            <div class="fpsml-feat-col">
+                
+                <p>Textfield, Textarea</p>
+                
+            </div>
+            <div class="fpsml-feat-col">
+                
+                <p>Textfield, Textarea, Select Dropdown, Checkbox, Radio Button, Number, Email, Datepicker, File Uploader, URL, Tel, Youtube Embed, Hidden, WYSIWYG Editor</p>
+                
+            </div>
+        </div> 
+        <div class="fpsml-compare-row fpsml--flex fpsml--flex-w">
+            <div class="fpsml-feat-col">
+                <p>Custom Post Type Support</p>
+            </div>
+            <div class="fpsml-feat-col">
+                <p class="no"><i class="fa fa-times" aria-hidden="true"></i></p>
+            </div>
+            <div class="fpsml-feat-col">
+                <p class="yes"><i class="fa fa-check" aria-hidden="true"></i></p>
+            </div>
+        </div> 
+        <div class="fpsml-compare-row fpsml--flex fpsml--flex-w">
+            <div class="fpsml-feat-col">
+                <p>Custom Taxonomy Support</p>
+            </div>
+            <div class="fpsml-feat-col">
+                <p class="no"><i class="fa fa-times" aria-hidden="true"></i></p>
+            </div>
+            <div class="fpsml-feat-col">
+                <p class="yes"><i class="fa fa-check" aria-hidden="true"></i></p>
+            </div>
+        </div> 
+        <div class="fpsml-compare-row fpsml--flex fpsml--flex-w">
+            <div class="fpsml-feat-col">
+                <p>Submission Limits</p>
+            </div>
+            <div class="fpsml-feat-col">
+                <p class="no"><i class="fa fa-times" aria-hidden="true"></i></p>
+            </div>
+            <div class="fpsml-feat-col">
+                <p class="yes"><i class="fa fa-check" aria-hidden="true"></i></p>
+            </div>
+        </div>
+        <div class="fpsml-compare-row fpsml--flex fpsml--flex-w">
+            <div class="fpsml-feat-col">
+                <p>Post Status Control</p>
+            </div>
+            <div class="fpsml-feat-col">
+                <p class="no"><i class="fa fa-times" aria-hidden="true"></i></p>
+            </div>
+            <div class="fpsml-feat-col">
+                <p class="yes"><i class="fa fa-check" aria-hidden="true"></i></p>
+            </div>
+        </div>
+        <div class="fpsml-compare-row fpsml--flex fpsml--flex-w">
+            <div class="fpsml-feat-col">
+                <p>Layout Customization Options</p>
+            </div>
+            <div class="fpsml-feat-col">
+                <p class="no"><i class="fa fa-times" aria-hidden="true"></i></p>
+            </div>
+            <div class="fpsml-feat-col">
+                <p class="yes"><i class="fa fa-check" aria-hidden="true"></i></p>
+            </div>
+        </div>
+        <div class="fpsml-compare-row fpsml--flex fpsml--flex-w">
+            <div class="fpsml-feat-col">
+                <p>Advanced Workflow Controls</p>
+            </div>
+            <div class="fpsml-feat-col">
+                <p class="no"><i class="fa fa-times" aria-hidden="true"></i></p>
+            </div>
+            <div class="fpsml-feat-col">
+                <p class="yes"><i class="fa fa-check" aria-hidden="true"></i></p>
+            </div>
+        </div>
+        <div class="fpsml-compare-row fpsml--flex fpsml--flex-w">
+            <div class="fpsml-feat-col">
+                <p>Support</p>
+            </div>
+
+            <div class="fpsml-feat-col">
+                
+                <p>Standard Support</p>
+                
+            </div>
+            <div class="fpsml-feat-col">
+                
+                <p>Dedicated Priority Support</p>
+                
+            </div>
+        </div>  
+        <div class="fpsml-compare-row fpsml--flex fpsml--flex-w">
+            <div class="fpsml-feat-col">
+                <p>Drag & Drop Form Builder</p>
             </div>
             <div class="fpsml-feat-col">
                 <p class="yes"><i class="fa fa-check" aria-hidden="true"></i></p>
@@ -56,38 +169,6 @@
                 <p class="yes"><i class="fa fa-check" aria-hidden="true"></i></p>
             </div>
         </div>
-        <div class="fpsml-compare-row fpsml--flex fpsml--flex-w">
-            <div class="fpsml-feat-col">
-                <p>Pre Designed Templates</p>
-            </div>
-
-            <div class="fpsml-feat-col">
-                
-                <p>5</p>
-                
-            </div>
-            <div class="fpsml-feat-col">
-                
-                <p>20+</p>
-                
-            </div>
-        </div> 
-        <div class="fpsml-compare-row fpsml--flex fpsml--flex-w">
-            <div class="fpsml-feat-col">
-                <p>Available Custom Field Types</p>
-            </div>
-
-            <div class="fpsml-feat-col">
-                
-                <p>Textfield, Textarea</p>
-                
-            </div>
-            <div class="fpsml-feat-col">
-                
-                <p>Textfield, Textarea, Select Dropdown, Checkbox, Radio Button, Number, Email, Datepicker, File Uploader, URL, Tel, Youtube Embed, Hidden, WYSIWYG Editor</p>
-                
-            </div>
-        </div> 
         <div class="fpsml-compare-row fpsml--flex fpsml--flex-w">
             <div class="fpsml-feat-col">
                 <p>Standard Post Support</p>
@@ -112,54 +193,10 @@
         </div>
         <div class="fpsml-compare-row fpsml--flex fpsml--flex-w">
             <div class="fpsml-feat-col">
-                <p>Post Status Specific Submit</p>
-            </div>
-            <div class="fpsml-feat-col">
-                <p class="no"><i class="fa fa-times" aria-hidden="true"></i></p>
+                <p>Frontend Form Preview</p>
             </div>
             <div class="fpsml-feat-col">
                 <p class="yes"><i class="fa fa-check" aria-hidden="true"></i></p>
-            </div>
-        </div>
-        <div class="fpsml-compare-row fpsml--flex fpsml--flex-w">
-            <div class="fpsml-feat-col">
-                <p> Frontend Form Preview</p>
-            </div>
-            <div class="fpsml-feat-col">
-                <p class="yes"><i class="fa fa-check" aria-hidden="true"></i></p>
-            </div>
-            <div class="fpsml-feat-col">
-                <p class="yes"><i class="fa fa-check" aria-hidden="true"></i></p>
-            </div>
-        </div>
-        <div class="fpsml-compare-row fpsml--flex fpsml--flex-w">
-            <div class="fpsml-feat-col">
-                <p>Custom Post Types Support</p>
-            </div>
-            <div class="fpsml-feat-col">
-                <p class="no"><i class="fa fa-times" aria-hidden="true"></i></p>
-            </div>
-            <div class="fpsml-feat-col">
-                <p class="yes"><i class="fa fa-check" aria-hidden="true"></i></p>
-            </div>
-        </div> 
-        <div class="fpsml-compare-row fpsml--flex fpsml--flex-w">
-            <div class="fpsml-feat-col">
-                <p>Custom Taxonomies Support</p>
-            </div>
-            <div class="fpsml-feat-col">
-                <p class="no"><i class="fa fa-times" aria-hidden="true"></i></p>
-            </div>
-            <div class="fpsml-feat-col">
-                <p class="yes"><i class="fa fa-check" aria-hidden="true"></i></p>
-            </div>
-        </div> 
-        <div class="fpsml-compare-row fpsml--flex fpsml--flex-w">
-            <div class="fpsml-feat-col">
-                <p>Post Submission Limit</p>
-            </div>
-            <div class="fpsml-feat-col">
-                <p class="no"><i class="fa fa-times" aria-hidden="true"></i></p>
             </div>
             <div class="fpsml-feat-col">
                 <p class="yes"><i class="fa fa-check" aria-hidden="true"></i></p>
@@ -200,29 +237,7 @@
         </div> 
         <div class="fpsml-compare-row fpsml--flex fpsml--flex-w">
             <div class="fpsml-feat-col">
-                <p>Layout Customization Options</p>
-            </div>
-            <div class="fpsml-feat-col">
-                <p class="no"><i class="fa fa-times" aria-hidden="true"></i></p>
-            </div>
-            <div class="fpsml-feat-col">
-                <p class="yes"><i class="fa fa-check" aria-hidden="true"></i></p>
-            </div>
-        </div>
-        <div class="fpsml-compare-row fpsml--flex fpsml--flex-w">
-            <div class="fpsml-feat-col">
-                <p>Advanced Workflow Controls</p>
-            </div>
-            <div class="fpsml-feat-col">
-                <p class="no"><i class="fa fa-times" aria-hidden="true"></i></p>
-            </div>
-            <div class="fpsml-feat-col">
-                <p class="yes"><i class="fa fa-check" aria-hidden="true"></i></p>
-            </div>
-        </div>
-        <div class="fpsml-compare-row fpsml--flex fpsml--flex-w">
-            <div class="fpsml-feat-col">
-                <p>All device friendly and browser Compatibility</p>
+                <p>Device-Friendly & Browser Compatible</p>
             </div>
             <div class="fpsml-feat-col">
                 <p class="yes"><i class="fa fa-check" aria-hidden="true"></i></p>
@@ -232,27 +247,11 @@
             </div>
         </div> 
         <div class="fpsml-compare-row fpsml--flex fpsml--flex-w">
-            <div class="fpsml-feat-col">
-                <p>Support</p>
-            </div>
-
-            <div class="fpsml-feat-col">
-                
-                <p>Normal</p>
-                
-            </div>
-            <div class="fpsml-feat-col">
-                
-                <p>Dedicated</p>
-                
-            </div>
-        </div>  
-        <div class="fpsml-compare-row fpsml--flex fpsml--flex-w">
             <div class="fpsml-feat-col"></div>
             <div class="fpsml-feat-col"> </div>
             <div class="fpsml-feat-col">
             <div class="fpsml-add-wrap">
-            <a href="<?php echo esc_url(FPSML_UPGRADE_LINK); ?>" target="_blank"><input type="button" class="fpsml-button-primary" value="<?php esc_html_e('Upgrade to PRO', 'frontend-post-submission-manager-lite'); ?>"></a>
+            <a href="<?php echo esc_url(FPSML_UPGRADE_LINK); ?>" target="_blank"><input type="button" class="fpsml-button-primary" value="<?php esc_html_e('Upgrade to PRO - $25 Lifetime Updates', 'frontend-post-submission-manager-lite'); ?>"></a>
         </div>
                 
                 

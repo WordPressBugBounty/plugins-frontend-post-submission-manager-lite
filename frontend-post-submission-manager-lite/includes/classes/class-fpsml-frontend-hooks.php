@@ -28,6 +28,7 @@ if (!class_exists('FPSML_Frontend_Hooks')) {
 
             wp_enqueue_style('fpsml-fonts', FPSML_URL . '/assets/font-face/NunitoSans/stylesheet.css', array(), FPSML_VERSION);
             wp_enqueue_style('fpsml-fonts', FPSML_URL . '/assets/font-face/comingsoon/stylesheet.css', array(), FPSML_VERSION);
+            wp_enqueue_style('fpsml-fonts', FPSML_URL . '/assets/font-face/urbanist/stylesheet.css', array(), FPSML_VERSION);
         }
 
         function append_custom_fields_before($content) {

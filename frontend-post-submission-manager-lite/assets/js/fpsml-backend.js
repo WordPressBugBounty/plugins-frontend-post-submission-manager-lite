@@ -73,6 +73,50 @@ jQuery(document).ready(function ($) {
         return str;
     }
 
+    var fpsml_deactivation_url = '';
+
+    $('body').on('click', 'tr[data-plugin="' + fpsml_backend_obj.plugin_basename + '"] .deactivate a', function (e) {
+        e.preventDefault();
+        fpsml_deactivation_url = $(this).attr('href');
+        $('.fpsml-deactivation-feedback-overlay').css('display', 'flex').hide().fadeIn(150);
+    });
+
+    $('body').on('click', '.fpsml-deactivation-cancel', function () {
+        $('.fpsml-deactivation-feedback-overlay').fadeOut(150);
+        fpsml_deactivation_url = '';
+    });
+
+    $('body').on('click', '.fpsml-deactivation-skip', function () {
+        if (fpsml_deactivation_url) {
+            window.location.href = fpsml_deactivation_url;
+        }
+    });
+
+    $('body').on('submit', '.fpsml-deactivation-feedback-form', function (e) {
+        e.preventDefault();
+        var $form = $(this);
+        var reason = $form.find('input[name="reason"]:checked').val() || '';
+        var message = $form.find('textarea[name="message"]').val() || '';
+
+        $form.find('button').prop('disabled', true);
+
+        $.ajax({
+            type: 'post',
+            url: fpsml_backend_obj.ajax_url,
+            data: {
+                action: 'fpsml_deactivation_feedback',
+                _wpnonce: fpsml_backend_obj.ajax_nonce,
+                reason: reason,
+                message: message
+            },
+            complete: function () {
+                if (fpsml_deactivation_url) {
+                    window.location.href = fpsml_deactivation_url;
+                }
+            }
+        });
+    });
+
     /**
      * Initialize checkbox as toggle switch
      * 
@@ -443,7 +487,62 @@ jQuery(document).ready(function ($) {
         $(".fpsml-compare-panel").hide(); 
          $(".fpsml-wrap").removeClass("fpsml-compare-overlay");
       });
-     
+
+    $(".fpsml-faq-question").click(function () {
+
+    const currentItem = $(this).closest(".fpsml-faq-item");
+
+    // close others
+    $(".fpsml-faq-item").not(currentItem).removeClass("active");
+
+    // toggle current
+    currentItem.toggleClass("active");
+
+  });
+
+
+ jQuery(function ($) {
+
+    let current = 0;
+
+    const $track = $('.fpsml-rating-track');
+    const total = $('.fpsml-rating-card').length;
+    const visible = 3;
+
+    function slide() {
+        const cardWidth = $('.fpsml-rating-card').outerWidth(true);
+
+        $track.css(
+            'transform',
+            'translateX(-' + (current * cardWidth) + 'px)'
+        );
+    }
+
+    $('.fpsml-next').on('click', function (e) {
+        e.preventDefault();
+
+        if (current < total - visible) {
+            current++;
+        } else {
+            current = 0;
+        }
+
+        slide();
+    });
+
+    $('.fpsml-prev').on('click', function (e) {
+        e.preventDefault();
+
+        if (current > 0) {
+            current--;
+        } else {
+            current = total - visible;
+        }
+
+        slide();
+    });
+
+});
     
 
 });

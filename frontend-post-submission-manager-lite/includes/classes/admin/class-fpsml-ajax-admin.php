@@ -10,6 +10,8 @@ if (!class_exists('FPSML_Ajax_Admin')) {
             add_action('wp_ajax_nopriv_fpsml_form_edit_action', array($this, 'permission_denied'));
             add_action('wp_ajax_fpsml_settings_save_action', array($this, 'save_global_settings'));
             add_action('wp_ajax_nopriv_fpsml_settings_save_action', array($this, 'permission_denied'));
+            add_action('wp_ajax_fpsml_deactivation_feedback', array($this, 'send_deactivation_feedback'));
+            add_action('wp_ajax_nopriv_fpsml_deactivation_feedback', array($this, 'permission_denied'));
         }
 
         function permission_denied() {
@@ -107,6 +109,29 @@ if (!class_exists('FPSML_Ajax_Admin')) {
             } else {
                 $this->permission_denied();
             }
+        }
+
+        function send_deactivation_feedback() {
+            if (empty($_POST['_wpnonce']) || !wp_verify_nonce($_POST['_wpnonce'], 'fpsml_backend_ajax_nonce') || !current_user_can('activate_plugins')) {
+                wp_send_json_success();
+            }
+
+            $reason = (!empty($_POST['reason'])) ? sanitize_text_field(wp_unslash($_POST['reason'])) : esc_html__('No reason selected', 'frontend-post-submission-manager-lite');
+            $message = (!empty($_POST['message'])) ? sanitize_textarea_field(wp_unslash($_POST['message'])) : '';
+            $to = apply_filters('fpsml_deactivation_feedback_email', FPSML_DEACTIVATION_FEEDBACK_EMAIL);
+
+            if (!empty($to) && is_email($to)) {
+                $subject = esc_html__('[FPSM Lite] Deactivation Feedback', 'frontend-post-submission-manager-lite');
+                $body = "Reason: {$reason}\n\n";
+                $body .= "Message:\n" . ($message ? $message : esc_html__('No additional message provided.', 'frontend-post-submission-manager-lite')) . "\n\n";
+                $body .= 'Plugin Version: ' . FPSML_VERSION . "\n";
+                $body .= 'WordPress Version: ' . get_bloginfo('version') . "\n";
+                $body .= 'PHP Version: ' . PHP_VERSION . "\n";
+
+                wp_mail($to, $subject, $body);
+            }
+
+            wp_send_json_success();
         }
     }
 

@@ -5,7 +5,7 @@ defined('ABSPATH') or die('No script kiddies please');
 /*
   Plugin Name: Frontend Post Submission Manager Lite
   Description: A plugin to submit and manage WordPress posts from frontend with or without logging in
-  Version:     1.3.1
+  Version:     1.3.2
   Author:      WP Shuffle
   Author URI:  http://wpshuffle.com
   Plugin URI: http://wpshuffle.com/wordpress-plugins/frontend-post-submission-manager-lite
@@ -20,6 +20,8 @@ defined('FPSML_URL') or define('FPSML_URL', untrailingslashit(plugin_dir_url(__F
 defined('FPSML_PATH') or define('FPSML_PATH', untrailingslashit(plugin_dir_path(__FILE__)));
 defined('FPSML_LANGAUGE_PATH') or define('FPSML_LANGAUGE_PATH', dirname(plugin_basename(__FILE__)) . '/languages');
 defined('FPSML_UPGRADE_LINK') or define('FPSML_UPGRADE_LINK', 'https://1.envato.market/fpsm');
+defined('FPSML_BASENAME') or define('FPSML_BASENAME', plugin_basename(__FILE__));
+defined('FPSML_DEACTIVATION_FEEDBACK_EMAIL') or define('FPSML_DEACTIVATION_FEEDBACK_EMAIL', 'support@wpshuffle.com');
 
 
 

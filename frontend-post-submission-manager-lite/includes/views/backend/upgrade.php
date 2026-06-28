@@ -9,7 +9,7 @@
             <a href="<?php echo esc_url(FPSML_UPGRADE_LINK); ?>" target="_blank"><input type="button" class="fpsml-button-primary" value="<?php esc_html_e('Upgrade to PRO', 'frontend-post-submission-manager-lite'); ?>"></a>
         </div>
     </div>
-<?php include(FPSML_PATH.'/includes/views/backend/upgrade-banner.php');?>
+<!-- <?php include(FPSML_PATH.'/includes/views/backend/upgrade-banner.php');?> -->
     <div class="fpsml-block-wrap">
         <?php include(FPSML_PATH . '/includes/views/backend/upgrade-to-pro-section.php'); ?>
     </div>

@@ -2,10 +2,10 @@
 Contributors: wpshuffle
 Donate link: http://wpshuffle.com/
 Tags: frontend posting, frontend post, guest posting, user post, anonymous post
-Requires at least: 5.5
+Requires at least: 6.0
 Tested up to: 7.0
 Requires PHP: 7.0
-Stable tag: 1.3.1
+Stable tag: 1.3.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -67,6 +67,9 @@ Optimized for all devices and browsers for universal accessibility.
 
 🌐 <strong>Translation Ready</strong>
 Expand your reach with translation-ready features for global audiences.
+
+= Privacy =
+When deactivating the plugin, users may optionally submit feedback. No feedback is sent unless the user chooses to submit it. If submitted, the selected reason, optional message, plugin version, WordPress version, and PHP version may be emailed to the plugin team to help improve the plugin.
 
 = Lite is Best For =
 * Guest post submission on a blog or magazine site
@@ -146,8 +149,16 @@ No you won't need to design the forms because we have 5 pre designed form templa
 9. Frontend Post Submission Backend Security Settings
 
 == Changelog ==
+= 1.3.2 = 
+* Improved the Upgrade to PRO section copy to better explain PRO-only features and lifetime update pricing.
+* Updated the Free vs PRO comparison table for clearer feature differences.
+* Improved the Upgrade to PRO FAQ section with more detailed PRO feature information.
+* Refined backend button styling and spacing for a more consistent admin experience.
+* Fixed the review slider navigation so it no longer triggers form save actions.
+* Added an optional deactivation feedback prompt to help understand why users deactivate the plugin.
+
 = 1.3.1 = 
-* * Fixed file upload authorization so guest uploads remain available for guest forms while login-required forms now require an authenticated user.
+* Fixed file upload authorization so guest uploads remain available for guest forms while login-required forms now require an authenticated user.
 
 = 1.3.0 = 
 * Added Cloudflare Turnstile captcha support
@@ -253,4 +264,3 @@ No you won't need to design the forms because we have 5 pre designed form templa
 
 == Upgrade Notice ==
 There is a new version available for the plugin. Please update to get the latest update and bug fixes for this plugin. 
-

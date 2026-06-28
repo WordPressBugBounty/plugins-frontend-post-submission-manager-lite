@@ -25,11 +25,12 @@ if ( !class_exists( 'FPSML_Admin_Enqueue' ) ) {
                 'are_your_sure' => esc_html__( 'It looks like you have been editing something. If you leave before saving, your changes will be lost.', 'frontend-post-submission-manager-lite' ),
                 'copy_form_confirm' => esc_html__( 'Are you sure you want to copy this form?', 'frontend-post-submission-manager-lite' )
             );
-            $js_obj = array( 'ajax_url' => admin_url( 'admin-ajax.php' ), 'plugin_url' => FPSML_URL, 'ajax_nonce' => wp_create_nonce( 'fpsml_backend_ajax_nonce' ), 'translation_strings' => $translation_strings );
+            $js_obj = array( 'ajax_url' => admin_url( 'admin-ajax.php' ), 'plugin_url' => FPSML_URL, 'plugin_basename' => FPSML_BASENAME, 'ajax_nonce' => wp_create_nonce( 'fpsml_backend_ajax_nonce' ), 'translation_strings' => $translation_strings );
             wp_enqueue_style( 'wp-color-picker' );
             wp_enqueue_media();
             wp_enqueue_style( 'fpsml-backend-style', FPSML_URL . '/assets/css/fpsml-backend-style.css', array(), FPSML_VERSION );
             wp_enqueue_style( 'fontawesome', FPSML_URL . '/assets/fontawesome/css/all.min.css', array(), FPSML_VERSION );
+            wp_enqueue_style('fpsml-fonts', FPSML_URL . '/assets/font-face/urbanist/stylesheet.css', array(), FPSML_VERSION);
             wp_enqueue_script( 'fpsml-are-you-sure-script', FPSML_URL . '/assets/js/jquery.are-you-sure.js', array( 'jquery' ), FPSML_VERSION );
             wp_enqueue_script( 'fpsml-backend-script', FPSML_URL . '/assets/js/fpsml-backend.js', array( 'jquery', 'wp-util', 'jquery-ui-sortable', 'jquery-ui-datepicker', 'fpsml-are-you-sure-script', 'wp-color-picker' ), FPSML_VERSION );
             wp_localize_script( 'fpsml-backend-script', 'fpsml_backend_obj', $js_obj );
