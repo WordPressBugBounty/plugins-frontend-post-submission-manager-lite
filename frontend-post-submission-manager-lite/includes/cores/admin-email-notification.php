@@ -18,12 +18,12 @@ if (!empty($form_details['notification']['admin']['enable'])) {
         }
         $author_name = get_post_meta($insert_update_post_id, 'fpsml_author_name', true);
     }
-    $subject = str_replace('[post_title]', get_the_title($insert_update_post_id), $subject);
-    $subject = str_replace('[author_name]', $author_name, $subject);
     $notification_message = (!empty($form_details['notification']['admin']['notification_message'])) ? $form_details['notification']['admin']['notification_message'] : $fpsml_library_obj->sanitize_escaping_linebreaks($fpsml_library_obj->default_admin_notification());
-    $notification_message = str_replace('[post_title]', get_the_title($insert_update_post_id), $notification_message);
     $post_edit_link = admin_url('post.php?post=' . $insert_update_post_id . '&action=edit');
-    $notification_message = str_replace('[post_admin_link]', '<a href="' . $post_edit_link . '">' . $post_edit_link . '</a>', $notification_message);
+    $placeholder_replacements = $this->prepare_placeholder_replacements($insert_update_post_id, $author_name);
+    $placeholder_replacements['message']['[post_admin_link]'] = '<a href="' . esc_url($post_edit_link) . '">' . esc_html($post_edit_link) . '</a>';
+    $subject = str_replace(array_keys($placeholder_replacements['subject']), array_values($placeholder_replacements['subject']), $subject);
+    $notification_message = str_replace(array_keys($placeholder_replacements['message']), array_values($placeholder_replacements['message']), $notification_message);
     $admin_emails = (!empty($form_details['notification']['admin']['notification_emails'])) ? explode(',', $form_details['notification']['admin']['notification_emails']) : get_bloginfo('admin_email');
     $headers = array();
     $charset = get_option('blog_charset');

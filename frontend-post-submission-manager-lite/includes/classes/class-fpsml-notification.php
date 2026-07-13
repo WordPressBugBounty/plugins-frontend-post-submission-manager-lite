@@ -19,6 +19,29 @@ if (!class_exists('FPSML_Notification')) {
             }
         }
 
+        function prepare_placeholder_replacements($post_id, $author_name, $post_link = '') {
+            $post_title = get_the_title($post_id);
+
+            $subject_replacements = array(
+                '[post_title]' => sanitize_text_field(wp_strip_all_tags($post_title)),
+                '[author_name]' => sanitize_text_field(wp_strip_all_tags($author_name))
+            );
+
+            $message_replacements = array(
+                '[post_title]' => esc_html($post_title),
+                '[author_name]' => esc_html($author_name)
+            );
+
+            if (!empty($post_link)) {
+                $message_replacements['[post_link]'] = esc_url($post_link);
+            }
+
+            return array(
+                'subject' => $subject_replacements,
+                'message' => $message_replacements
+            );
+        }
+
         function trigger_post_reject_notifications($post_id) {
             if (!is_admin()) {
                 return;
@@ -52,11 +75,10 @@ if (!class_exists('FPSML_Notification')) {
             $from_name = (!empty($form_details['notification']['post_trash']['from_name'])) ? $form_details['notification']['post_trash']['from_name'] : esc_html__('No Reply', 'frontend-post-submission-manager-lite');
             $from_email = (!empty($form_details['notification']['post_trash']['from_email'])) ? $form_details['notification']['post_trash']['from_email'] : $fpsml_library_obj->default_from_email();
             $subject = (!empty($form_details['notification']['post_trash']['subject'])) ? $form_details['notification']['post_trash']['subject'] : $fpsml_library_obj->default_from_email();
-            $subject = str_replace('[post_title]', get_the_title($post_id), $subject);
-            $subject = str_replace('[author_name]', $author_name, $subject);
             $notification_message = (!empty($form_details['notification']['post_trash']['notification_message'])) ? $form_details['notification']['post_trash']['notification_message'] : $fpsml_library_obj->sanitize_escaping_linebreaks($fpsml_library_obj->default_trash_notification());
-            $notification_message = str_replace('[post_title]', get_the_title($post_id), $notification_message);
-            $notification_message = str_replace('[author_name]', $author_name, $notification_message);
+            $placeholder_replacements = $this->prepare_placeholder_replacements($post_id, $author_name);
+            $subject = str_replace(array_keys($placeholder_replacements['subject']), array_values($placeholder_replacements['subject']), $subject);
+            $notification_message = str_replace(array_keys($placeholder_replacements['message']), array_values($placeholder_replacements['message']), $notification_message);
             $headers = array();
             $charset = get_option('blog_charset');
             $headers[] = 'Content-Type: text/html; charset=' . $charset;
@@ -108,12 +130,10 @@ if (!class_exists('FPSML_Notification')) {
                 $from_name = (!empty($form_details['notification']['post_publish']['from_name'])) ? $form_details['notification']['post_publish']['from_name'] : esc_html__('No Reply', 'frontend-post-submission-manager-lite');
                 $from_email = (!empty($form_details['notification']['post_publish']['from_email'])) ? $form_details['notification']['post_publish']['from_email'] : $fpsml_library_obj->default_from_email();
                 $subject = (!empty($form_details['notification']['post_publish']['subject'])) ? $form_details['notification']['post_publish']['subject'] : $fpsml_library_obj->default_from_email();
-                $subject = str_replace('[post_title]', get_the_title($post_id), $subject);
-                $subject = str_replace('[author_name]', $author_name, $subject);
                 $notification_message = (!empty($form_details['notification']['post_publish']['notification_message'])) ? $form_details['notification']['post_publish']['notification_message'] : $fpsml_library_obj->sanitize_escaping_linebreaks($fpsml_library_obj->default_publish_notification());
-                $notification_message = str_replace('[post_title]', get_the_title($post_id), $notification_message);
-                $notification_message = str_replace('[author_name]', $author_name, $notification_message);
-                $notification_message = str_replace('[post_link]', $post_link, $notification_message);
+                $placeholder_replacements = $this->prepare_placeholder_replacements($post_id, $author_name, $post_link);
+                $subject = str_replace(array_keys($placeholder_replacements['subject']), array_values($placeholder_replacements['subject']), $subject);
+                $notification_message = str_replace(array_keys($placeholder_replacements['message']), array_values($placeholder_replacements['message']), $notification_message);
                 $headers = array();
                 $charset = get_option('blog_charset');
                 $headers[] = 'Content-Type: text/html; charset=' . $charset;

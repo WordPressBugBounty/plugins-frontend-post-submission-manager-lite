@@ -34,6 +34,7 @@ if (!empty($edit_post) && has_post_thumbnail($post_id)) {
 </div>
 <input type="hidden" class="fpsml-upload-count" value="<?php echo (!empty($post_thumbnail_id)) ? 1 : 0; ?>"/>
 <input type="hidden" name="<?php echo esc_attr($field_key); ?>" class="fpsml-media-id" value="<?php echo (!empty($post_thumbnail_id)) ? intval($post_thumbnail_id) : ''; ?>"/>
+<input type="hidden" name="post_image_token" class="fpsml-media-token" value=""/>
 <div class="fpsml-file-preview-wrap">
     <?php
     if (!empty($edit_post) && has_post_thumbnail($post_id)) {

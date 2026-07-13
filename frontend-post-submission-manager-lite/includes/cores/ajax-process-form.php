@@ -94,6 +94,7 @@ if ($this->admin_ajax_nonce_verify()) {
             $response['message'] = (!empty($form_details['basic']['validation_error_message'])) ? esc_html($form_details['basic']['validation_error_message']) : esc_html__('Form validation error occurred.', 'frontend-post-submission-manager-lite');
         } else {
             //Lets process the form
+            $post_id = 0;
             if (is_user_logged_in()) {
                 $post_id = (!empty($form_data['post_id'])) ? intval($form_data['post_id']) : 0;
                 if (!empty($post_id)) {
@@ -109,6 +110,11 @@ if ($this->admin_ajax_nonce_verify()) {
                     $response['message'] = esc_html__('Unauthorized', 'frontend-post-submission-manager-lite');
                     die(json_encode($response));
                 }
+            }
+            if (isset($form_data['post_image']) && !empty($form_data['post_image']) && !$this->validate_post_image_attachment(intval($form_data['post_image']), $form_alias, $form_data, $post_id)) {
+                $response['status'] = 403;
+                $response['message'] = esc_html__('Invalid featured image.', 'frontend-post-submission-manager-lite');
+                die(json_encode($response));
             }
 
 

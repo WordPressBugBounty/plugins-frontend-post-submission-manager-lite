@@ -77,6 +77,13 @@ if (!class_exists('FPSML_Ajax')) {
                 $upload_url = $upload_dir['url'];
 
                 $result = $uploader->handleUpload($upload_path, $replaceOldFile = false, $upload_url);
+                if (!empty($result['success']) && !empty($result['media_id'])) {
+                    $media_token = wp_generate_password(32, false, false);
+                    update_post_meta($result['media_id'], '_fpsml_upload_form_alias', $form_alias);
+                    update_post_meta($result['media_id'], '_fpsml_upload_user_id', get_current_user_id());
+                    update_post_meta($result['media_id'], '_fpsml_upload_token', $media_token);
+                    $result['media_token'] = $media_token;
+                }
 
                 echo json_encode($result);
                 die();
@@ -110,6 +117,44 @@ if (!class_exists('FPSML_Ajax')) {
 
         function permission_denied() {
             die('No script kiddies please!!');
+        }
+
+        function validate_post_image_attachment($attachment_id, $form_alias, $form_data, $post_id = 0) {
+            if (empty($attachment_id) || !wp_attachment_is_image($attachment_id)) {
+                return false;
+            }
+
+            $existing_thumbnail_id = (!empty($post_id)) ? (int) get_post_thumbnail_id($post_id) : 0;
+            if (!empty($existing_thumbnail_id) && $existing_thumbnail_id === (int) $attachment_id) {
+                return true;
+            }
+
+            $stored_form_alias = get_post_meta($attachment_id, '_fpsml_upload_form_alias', true);
+            if ($stored_form_alias !== $form_alias) {
+                return false;
+            }
+
+            $stored_token = get_post_meta($attachment_id, '_fpsml_upload_token', true);
+            $submitted_token = (!empty($form_data['post_image_token'])) ? sanitize_text_field($form_data['post_image_token']) : '';
+            if (empty($stored_token) || empty($submitted_token) || !hash_equals($stored_token, $submitted_token)) {
+                return false;
+            }
+
+            $upload_user_id = (int) get_post_meta($attachment_id, '_fpsml_upload_user_id', true);
+            if (is_user_logged_in()) {
+                $current_user_id = get_current_user_id();
+                $attachment_author_id = (int) get_post_field('post_author', $attachment_id);
+                if (!empty($attachment_author_id) && $attachment_author_id !== $current_user_id && !current_user_can('edit_post', $attachment_id)) {
+                    return false;
+                }
+                if (!empty($upload_user_id) && $upload_user_id !== $current_user_id && !current_user_can('edit_post', $attachment_id)) {
+                    return false;
+                }
+            } elseif (!empty($upload_user_id)) {
+                return false;
+            }
+
+            return true;
         }
 
         function media_delete_action() {

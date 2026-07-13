@@ -1386,8 +1386,8 @@ p.fpsml-feat-p {
     box-sizing: border-box;
     width: 100%;
     overflow: hidden;
-    max-height: 270px;
-    min-height: 270px;
+    max-height: 285px;
+    min-height: 285px;
 }
 .fpsml-feat-img-wrap img {
     width: -webkit-fill-available;

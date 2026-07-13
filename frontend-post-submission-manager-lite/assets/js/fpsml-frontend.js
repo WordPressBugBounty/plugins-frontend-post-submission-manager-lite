@@ -98,6 +98,7 @@ jQuery(document).ready(function ($) {
                                 selector.closest('.fpsml-field').find('.fpsml-file-preview-wrap').append(file_preview_template(responseJSON));
                             } else {
                                 selector.closest('.fpsml-field').find('.fpsml-media-id').val(responseJSON.media_id);
+                                selector.closest('.fpsml-field').find('.fpsml-media-token').val(responseJSON.media_token);
                                 selector.closest('.fpsml-field').find('.fpsml-file-preview-wrap').html(file_preview_template(responseJSON));
                             }
                         }
@@ -160,6 +161,7 @@ jQuery(document).ready(function ($) {
         form[0].reset();
         form.find('.fpsml-file-preview-wrap').html('');
         form.find('.fpsml-media-id').val('');
+        form.find('.fpsml-media-token').val('');
         form.find('.fpsml-upload-count').val(0);
         form.find('.fpsml-error').html('').hide();
         fpsml_reset_captcha(form);
@@ -195,6 +197,7 @@ jQuery(document).ready(function ($) {
                             selector.closest('.fpsml-field').find('.fpsml-media-id').val(pre_saved_value);
                         } else {
                             selector.closest('.fpsml-field').find('.fpsml-media-id').val('');
+                            selector.closest('.fpsml-field').find('.fpsml-media-token').val('');
                         }
                         selector.closest('.fpsml-file-preview-row').remove();
                     } else {
@@ -216,6 +219,7 @@ jQuery(document).ready(function ($) {
                 selector.closest('.fpsml-field').find('.fpsml-media-id').val(pre_saved_value);
             } else {
                 selector.closest('.fpsml-field').find('.fpsml-media-id').val('');
+                selector.closest('.fpsml-field').find('.fpsml-media-token').val('');
             }
             selector.closest('.fpsml-file-preview-row').remove();
         }

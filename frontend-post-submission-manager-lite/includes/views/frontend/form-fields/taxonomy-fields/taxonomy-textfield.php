@@ -23,8 +23,7 @@ if (!empty($field_details['auto_complete'])) {
     <?php
 } else {
     ?>
-    <input type="text" name="<?php echo esc_attr($field_key); ?>" value="<?php echo ($edit_terms_value); ?>"/>
+    <input type="text" name="<?php echo esc_attr($field_key); ?>" value="<?php echo esc_attr($edit_terms_value); ?>"/>
     <?php
 }
 ?>
-
