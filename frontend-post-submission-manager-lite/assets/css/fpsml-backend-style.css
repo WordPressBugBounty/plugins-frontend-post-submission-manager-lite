@@ -1249,6 +1249,87 @@ img.upgrade-image {
   margin-bottom: 10px;
 }
 
+.fpsml-upgrade-callout {
+  --fpsml-upgrade-primary: #fc9d27;
+  --fpsml-upgrade-interactive: #e8722a;
+  --fpsml-upgrade-hover: #d4651f;
+  --fpsml-upgrade-active: #c05a1a;
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  width: 100%;
+  margin: 16px 0;
+  padding: 20px 24px;
+  border: 1px solid var(--fpsml-upgrade-primary);
+  border-radius: 12px;
+  background: #fef3eb;
+  color: #0f172a;
+  font-family: Urbanist, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.fpsml-upgrade-callout__content {
+  min-width: 0;
+}
+
+.fpsml-upgrade-callout__eyebrow {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--fpsml-upgrade-active);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.fpsml-upgrade-callout h2 {
+  margin: 0 0 5px;
+  color: #0f172a;
+  font-size: 20px;
+  line-height: 1.25;
+}
+
+.fpsml-upgrade-callout p {
+  margin: 0;
+  color: #475569;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.fpsml-upgrade-callout__cta {
+  display: inline-flex;
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  min-height: 40px;
+  align-items: center;
+  justify-content: center;
+  padding: 9px 16px;
+  border: 1px solid var(--fpsml-upgrade-interactive);
+  border-radius: 8px;
+  background: var(--fpsml-upgrade-interactive);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.fpsml-upgrade-callout__cta:hover {
+  border-color: var(--fpsml-upgrade-hover);
+  background: var(--fpsml-upgrade-hover);
+  color: #fff;
+}
+
+.fpsml-upgrade-callout__cta:active {
+  border-color: var(--fpsml-upgrade-active);
+  background: var(--fpsml-upgrade-active);
+}
+
+.fpsml-upgrade-callout__cta:focus-visible {
+  outline: 3px solid rgba(252, 157, 39, .45);
+  outline-offset: 2px;
+}
+
 div#fpsml-review-notice a {
   margin-right: 20px;
 }
@@ -2180,6 +2261,15 @@ text-align: center;
   img.upgrade-image {
     width: 100%;
 }
+  .fpsml-upgrade-callout {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 14px;
+    padding: 18px;
+  }
+  .fpsml-upgrade-callout__cta {
+    width: 100%;
+  }
   .fpsml-check-demo-section p{
     flex-wrap: wrap;
   }

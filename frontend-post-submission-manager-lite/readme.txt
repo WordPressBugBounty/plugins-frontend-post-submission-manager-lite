@@ -3,9 +3,9 @@ Contributors: wpshuffle
 Donate link: http://wpshuffle.com/
 Tags: frontend posting, frontend post, guest posting, user post, anonymous post
 Requires at least: 6.0
-Tested up to: 7.0
+Tested up to: 7.1
 Requires PHP: 7.0
-Stable tag: 1.3.3
+Stable tag: 1.3.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -149,6 +149,13 @@ No you won't need to design the forms because we have 5 pre designed form templa
 9. Frontend Post Submission Backend Security Settings
 
 == Changelog ==
+= 1.3.4 =
+* Added an accessible four-step Quick Start guide for administrators, with seeded-form and documentation fallbacks.
+* Added secure per-administrator guide dismissal with nonce, capability, persistence, and recoverable-error handling.
+* Added a responsive PayPal Pro upgrade callout with keyboard-visible focus.
+* Fixed Quick Start step-grid overflow at 200% browser zoom and responsive widths.
+* Verified compatibility with WordPress 7.1.
+
 = 1.3.3 =
 * Added security hardening improvements for plugin request handling.
 * Improved validation and sanitization for safer form and admin workflows.
@@ -269,4 +276,5 @@ No you won't need to design the forms because we have 5 pre designed form templa
 * Initial Commit to Repository
 
 == Upgrade Notice ==
-There is a new version available for the plugin. Please update to get the latest update and bug fixes for this plugin. 
+= 1.3.4 =
+Adds the administrator Quick Start guide and PayPal Pro callout, and fixes onboarding overflow at 200% browser zoom.

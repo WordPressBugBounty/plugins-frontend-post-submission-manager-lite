@@ -12,6 +12,7 @@ defined('ABSPATH') or die('No script kiddies please!!');
             <div class="fpsml-compare-btn"><div class="compare-click">Free Vs Pro</div></div>
         </div>
     </div>
+    <?php $this->render_first_success_panel(); ?>
 <?php include(FPSML_PATH.'/includes/views/backend/upgrade-banner.php');?>
 
     <div class="fpsml-grid-wrap">
