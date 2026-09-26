@@ -122,6 +122,23 @@ if ( !class_exists( 'FPSML_Library' ) ) {
              * @since 1.0.0
              */
             $allowed_html = apply_filters( 'fpsml_allowed_html', $allowed_html );
+            // Submitted HTML must not create active plugin uploader widgets.
+            foreach ( $allowed_html as &$attributes ) {
+                if ( !is_array( $attributes ) || !isset( $attributes['class'] ) || '' === $attributes['class'] ) {
+                    continue;
+                }
+                $checks = is_array( $attributes['class'] ) ? $attributes['class'] : array();
+                $previous_callback = isset( $checks['value_callback'] ) ? $checks['value_callback'] : null;
+                $checks['value_callback'] = function ( $class_value ) use ( $previous_callback ) {
+                    $decoded = html_entity_decode( $class_value, ENT_QUOTES | ENT_HTML5, 'UTF-8' );
+                    if ( preg_match( '/(?:^|[\x20\t\r\n\f])fpsml-file-uploader(?:$|[\x20\t\r\n\f])/', $decoded ) ) {
+                        return false;
+                    }
+                    return null === $previous_callback || call_user_func( $previous_callback, $class_value );
+                };
+                $attributes['class'] = $checks;
+            }
+            unset( $attributes );
             return wp_kses( $value, $allowed_html );
         }
 

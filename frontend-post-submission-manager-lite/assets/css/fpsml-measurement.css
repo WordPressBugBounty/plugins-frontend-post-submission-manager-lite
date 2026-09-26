@@ -1,0 +1,137 @@
+.fpsml-measurement-card {
+    --fpsml-measurement-primary: #2f5b9f;
+    --fpsml-measurement-text: #1d2327;
+    --fpsml-measurement-muted: #50575e;
+    --fpsml-measurement-border: #c3c4c7;
+    --fpsml-measurement-soft: #fef3eb;
+    box-sizing: border-box;
+    max-width: 760px;
+    margin-top: 24px;
+    padding: 24px;
+    border: 1px solid var(--fpsml-measurement-border);
+    border-radius: 8px;
+    background: #fff;
+    color: var(--fpsml-measurement-text);
+    font-family: Urbanist, sans-serif;
+}
+
+.fpsml-measurement-card *,
+.fpsml-measurement-card *::before,
+.fpsml-measurement-card *::after {
+    box-sizing: border-box;
+}
+
+.fpsml-measurement-heading,
+.fpsml-measurement-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.fpsml-measurement-heading {
+    justify-content: space-between;
+}
+
+.fpsml-measurement-heading h2 {
+    margin: 0;
+    color: var(--fpsml-measurement-text);
+    font-size: 20px;
+}
+
+.fpsml-measurement-card > p {
+    color: var(--fpsml-measurement-muted);
+    line-height: 1.5;
+}
+
+.fpsml-measurement-status {
+    min-width: 56px;
+    padding: 5px 12px;
+    border-radius: 999px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.fpsml-measurement-status.is-disabled {
+    background: var(--fpsml-measurement-soft);
+}
+
+.fpsml-measurement-status.is-enabled {
+    background: #93bb66;
+}
+
+.fpsml-measurement-privacy,
+.fpsml-measurement-reset {
+    margin: 16px 0;
+    padding: 14px 16px;
+    border-radius: 4px;
+    background: var(--fpsml-measurement-soft);
+}
+
+.fpsml-measurement-privacy p,
+.fpsml-measurement-reset p {
+    margin: 6px 0 0;
+    color: var(--fpsml-measurement-muted);
+    line-height: 1.5;
+}
+
+.fpsml-measurement-actions form {
+    margin: 0;
+}
+
+.fpsml-measurement-summary {
+    margin: 16px 0;
+}
+
+.fpsml-measurement-notice {
+    margin-bottom: 16px;
+    padding: 12px;
+    border-left: 4px solid var(--fpsml-measurement-primary);
+    background: #f0f6fc;
+}
+
+.fpsml-measurement-notice-error {
+    border-color: #c72e2e;
+    background: #feecec;
+}
+
+.fpsml-measurement-notice-success {
+    border-color: #00a32a;
+    background: #edfaef;
+}
+
+.fpsml-measurement-card .button-primary {
+    border-color: var(--fpsml-measurement-primary);
+    background: var(--fpsml-measurement-primary);
+}
+
+.fpsml-measurement-card .button:focus-visible,
+.fpsml-measurement-card .button-primary:focus-visible {
+    border-color: var(--fpsml-measurement-primary);
+    box-shadow: 0 0 0 2px #fff, 0 0 0 4px var(--fpsml-measurement-primary);
+    outline: 2px solid transparent;
+}
+
+.fpsml-measurement-enable {
+    min-height: 40px;
+}
+
+@media screen and (max-width: 782px) {
+    .fpsml-measurement-card {
+        width: 100%;
+        max-width: none;
+        padding: 20px;
+    }
+
+    .fpsml-measurement-actions {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .fpsml-measurement-actions .button,
+    .fpsml-measurement-actions form,
+    .fpsml-measurement-actions form .button,
+    .fpsml-measurement-enable {
+        width: 100%;
+        min-height: 44px;
+    }
+}

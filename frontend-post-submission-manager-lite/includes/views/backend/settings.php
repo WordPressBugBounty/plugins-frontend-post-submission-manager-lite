@@ -42,4 +42,10 @@ $fpsml_settings = get_option('fpsml_settings');
             </div>
         </div>
     </form>
+    <?php
+    global $fpsml_measurement_obj;
+    if ($fpsml_measurement_obj instanceof FPSML_Measurement) {
+        $fpsml_measurement_obj->render_settings_card();
+    }
+    ?>
 </div>

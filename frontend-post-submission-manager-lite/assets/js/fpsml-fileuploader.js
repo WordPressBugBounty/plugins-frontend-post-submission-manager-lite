@@ -574,10 +574,17 @@ qq.FileUploader = function(o){
     
     // overwrite the upload button text if any
     // same for the Cancel button and Fail message text
-    this._options.template     = this._options.template.replace(/\{dragText\}/g, this._options.dragText);
-    this._options.template     = this._options.template.replace(/\{uploadButtonText\}/g, this._options.uploadButtonText);
-    this._options.fileTemplate = this._options.fileTemplate.replace(/\{cancelButtonText\}/g, this._options.cancelButtonText);
-    this._options.fileTemplate = this._options.fileTemplate.replace(/\{failUploadtext\}/g, this._options.failUploadText);
+    // Labels are text, including when read from untrusted data-* attributes.
+    // Replace all tokens in one pass so label text cannot introduce new tokens.
+    var options = this._options;
+    var replaceText = function(match, name) {
+        var value = options[name === 'failUploadtext' ? 'failUploadText' : name];
+        var text = document.createElement('span');
+        qq.setText(text, value == null ? '' : String(value));
+        return text.innerHTML;
+    };
+    this._options.template = this._options.template.replace(/\{(dragText|uploadButtonText)\}/g, replaceText);
+    this._options.fileTemplate = this._options.fileTemplate.replace(/\{(cancelButtonText|failUploadtext)\}/g, replaceText);
 
     this._element = this._options.element;
     this._element.innerHTML = this._options.template;        

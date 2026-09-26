@@ -1,116 +1,71 @@
-=== Frontend Post Submission Manager Lite - Frontend Posting WordPress Plugin ===
+=== Frontend Post Submission Manager Lite – Guest Post and Frontend Submission Forms ===
 Contributors: wpshuffle
 Donate link: http://wpshuffle.com/
 Tags: frontend posting, frontend post, guest posting, user post, anonymous post
 Requires at least: 6.0
 Tested up to: 7.1
 Requires PHP: 7.0
-Stable tag: 1.3.4
+Stable tag: 1.3.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Frontend post submission with or without login, 5 pre-designed templates, simple custom fields, Google reCAPTCHA and Cloudflare Turnstile security, and post notifications
+Create guest and logged-in frontend post forms with seeded setup, simple fields, five templates, notifications, and captcha protection.
 
 == Description ==
-<strong>Frontend Post Submission Manager Lite</strong> is a free and user-friendly frontend posting plugin for WordPress. It helps you publish complete frontend submission workflows for standard WordPress posts, with or without login, so you can collect guest posts and community submissions without building a custom system.
+Publish your first frontend submission form in four steps: choose a ready-to-use form, configure its fields, add the shortcode to a page, and submit a test entry.
 
-Lite is designed to be useful immediately for a small site, blog, or community. It includes guest and login-required submission forms, frontend preview, notifications, and simple custom fields so you can launch quickly without custom development.
+<strong>Frontend Post Submission Manager Lite</strong> gives WordPress sites a practical frontend workflow for standard posts. Start with a guest form or a login-required form, then decide which fields appear, how submitted posts are handled, and who receives notifications—without building a custom form system.
 
 https://www.youtube.com/watch?v=oOd3kbQjrKg
 
+= Start With a Ready-to-Use Form =
+After activation, the Quick Start guide points administrators through the first-success path:
 
-= Frontend Post Submission Manager Lite Features =
-📋 <strong>Guest Post Form and Login Required Form with Drag and Drop Form Builder</strong>
-Create custom submission forms effortlessly using a user-friendly drag-and-drop builder.
+1. Choose the Guest Post Form or Login Require Form.
+2. Configure labels, required fields, post status, notifications, and spam protection.
+3. Publish the form using its shortcode.
+4. Submit a test entry and confirm the expected post status.
 
-🛠️ <strong>Unlimited Simple Custom Fields</strong>
-Collect extra submission data with simple custom fields such as textfield and textarea.
-
-👁️‍🗨️ <strong>Frontend and Backend Display</strong>
-View custom field data both on the frontend and backend for easy access.
-
-🖌️ <strong>5 Beautiful Pre-Designed Templates</strong>
-Choose from five visually appealing templates to enhance form aesthetics.
-
-🌐 <strong>Guest Post Support</strong>
-Encourage guest contributors to submit content and expand engagement.
-
-🔒 <strong>Secure Form Submission with Captcha Protection</strong>
-Protect your site from spam with Google reCAPTCHA or Cloudflare Turnstile integration.
-
-📧 <strong>Admin and User Notification Configurations</strong>
-Customize notifications for admin and users to stay informed.
-
-👁️‍🗨️ <strong>Frontend Form Preview</strong>
-Enable users to preview form entries before submission.
-
-🔀 <strong>Redirection after Successful Submission</strong>
-Redirect users to specific pages post-submission for a seamless experience.
-
-📈 <strong>Configure Submitted Post Status</strong>
-Customize post status, author, and format to align with your strategy.
-
-🔢 <strong>Character Limit Configuration</strong>
-Set character limits for content submissions.
-
-✅ <strong>Enable/Disable Form Components</strong>
-Tailor the form by enabling or disabling specific components.
-
-🔄 <strong>Ajax Form Submission</strong>
-Ensure real-time submissions with smooth Ajax form functionality.
-
-💼 <strong>Developer Documentation Available</strong>
-Access developer documentation for customizing the plugin.
-
-📱 <strong>All Device-Friendly and Browser Compatibility</strong>
-Optimized for all devices and browsers for universal accessibility.
-
-🌐 <strong>Translation Ready</strong>
-Expand your reach with translation-ready features for global audiences.
+= What Lite Includes =
+* Guest and login-required frontend forms for standard WordPress posts
+* A drag-and-drop form builder
+* Unlimited simple text and textarea custom fields
+* Five pre-designed frontend templates
+* Frontend preview and Ajax submission
+* Configurable post status, author, format, character limits, and form components
+* Administrator and submitter email notifications
+* Success redirection
+* Google reCAPTCHA or Cloudflare Turnstile spam protection
+* Translation-ready strings and developer documentation
 
 = Privacy =
 When deactivating the plugin, users may optionally submit feedback. No feedback is sent unless the user chooses to submit it. If submitted, the selected reason, optional message, plugin version, WordPress version, and PHP version may be emailed to the plugin team to help improve the plugin.
 
-= Lite is Best For =
-* Guest post submission on a blog or magazine site
-* Community article submission
+= Lite Is Best For =
+* Guest post submission on a blog or magazine
+* Community article collection
 * Logged-in contributor submission
-* A simple frontend posting workflow for standard WordPress posts
+* A straightforward frontend workflow for standard WordPress posts
 
 = Upgrade to Pro When You Need =
-* Unlimited forms
-* Frontend post management dashboard
-* Advanced custom field types such as select, checkbox, radio, number, email, datepicker, file uploader, URL, tel, YouTube, hidden, and WYSIWYG editor
-* Custom post types support
-* Custom taxonomies support
-* Post submission limits and advanced workflow controls
+Choose Pro for workflows beyond Lite's standard-post and simple-field scope:
 
-= What Is Available In Pro = 
-* Create Unlimited Forms with different Restrictions
-* 20+ Pre Designed Beautiful Form Templates
-* Custom field with various field types
- - Textfield
- - Textarea
- - Select Dropdown
- - Checkbox
- - Radio Button
- - Number
- - Email
- - Datepicker
- - File Uploader
- - URL
- - Tel
- - Youtube Embed
-* Frontend Post Management Dashboard
-* Direct Image upload to Post Content Editor with or without logging in
+* Unlimited forms
+* Advanced field types, including select, checkbox, radio, date, file, URL, telephone, YouTube, hidden, and WYSIWYG fields
+* Custom post types and custom taxonomies
+* A frontend post management dashboard
+* Submission limits and advanced workflow controls
+* PayPal payments for frontend submissions
+* Twenty or more pre-designed templates
+* Direct image upload to the post content editor
 
 Check all Frontend Post Submission Manager premium features [here](https://wpshuffle.com/wordpress-documentations/frontend-post-submission-manager/?utm_source=dotorg&utm_campaign=check)
 
 https://www.youtube.com/watch?v=2CGtfQG7RfU
 
-= Upgrade to PRO = 
-* To upgrade to pro, please go [here](https://wpshuffle.com/wordpress-documentations/frontend-post-submission-manager/?utm_source=dotorg&utm_campaign=check)    
-* To check demo, please go [here](http://demo.wpshuffle.com/frontend-post-submission-manager)
+= Upgrade to Pro =
+* To explore Pro, please go [here](https://wpshuffle.com/wordpress-documentations/frontend-post-submission-manager/?utm_source=dotorg&utm_campaign=check)
+* To view the demo, please go [here](http://demo.wpshuffle.com/frontend-post-submission-manager)
 
 == Installation ==
 
@@ -121,17 +76,20 @@ https://www.youtube.com/watch?v=2CGtfQG7RfU
 
 
 == Frequently Asked Questions ==
-= What does Frontend Post Submission Manager Lite Does? = 
-Our plugin provides you the form which you can use in the frontend through shortcode for Post Submission with or without logging in.
+= Can visitors submit posts without logging in? =
+Yes. Lite includes a guest form and a login-required form, so you can choose the appropriate access model.
 
-= Can I submit the post without login? =
-Yes, you can use our plugin for both Login and Without Login require forms.
+= How do I publish a form? =
+Configure one of the ready-to-use forms, then add its generated shortcode to a WordPress page.
 
 = Can I add custom fields? =
-Yes. Lite supports unlimited simple custom fields such as textfield and textarea. Pro adds advanced field types.
+Yes. Lite supports unlimited simple text and textarea fields. Pro adds advanced field types.
 
-= Do I need to design the form? = 
-No you won't need to design the forms because we have 5 pre designed form templates
+= Do I need to design the form? =
+No. Lite includes five pre-designed frontend templates.
+
+= Which content types does Lite support? =
+Lite is intended for standard WordPress posts. Pro adds custom post type and taxonomy workflows.
 
 == Screenshots ==
 
@@ -149,6 +107,10 @@ No you won't need to design the forms because we have 5 pre designed form templa
 9. Frontend Post Submission Backend Security Settings
 
 == Changelog ==
+
+= 1.3.5 =
+* Security: Prevent stored DOM-based cross-site scripting in uploader labels and messages, and block uploader markers in submitted HTML.
+
 = 1.3.4 =
 * Added an accessible four-step Quick Start guide for administrators, with seeded-form and documentation fallbacks.
 * Added secure per-administrator guide dismissal with nonce, capability, persistence, and recoverable-error handling.

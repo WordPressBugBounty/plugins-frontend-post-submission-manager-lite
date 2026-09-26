@@ -7,7 +7,7 @@ jQuery(document).ready(function ($) {
      */
     var translation_strings = fpsml_js_obj.translation_strings;
     function initialize_uploaders() {
-        $('.fpsml-file-uploader').each(function () {
+        $('form.fpsml-front-form .fpsml-file-uploader').each(function () {
             var form_alias = $(this).closest('form').data('alias');
             var selector = $(this);
             var attr_element_id = $(this).attr('id');
@@ -26,7 +26,7 @@ jQuery(document).ready(function ($) {
             var upload_limit_message = $(this).data('multiple-upload-error-message');
             var field_name = $(this).data('field-name');
             file_uploader_fields[uploader_name] = new qq.FileUploader({
-                element: document.getElementById(attr_element_id),
+                element: this,
                 action: fpsml_js_obj.ajax_url,
                 params: {
                     action: 'fpsml_file_upload_action',
@@ -47,7 +47,7 @@ jQuery(document).ready(function ($) {
                         selector.closest('.fpsml-field').find('.fpsml-upload-count').val(upload_count);
                         if (upload_count > upload_limit) {
                             upload_limit_message = (upload_limit_message) ? upload_limit_message : 'Maximum number of files allowed is ' + upload_limit;
-                            selector.closest('.fpsml-field-wrap').find('.fpsml-error').html(upload_limit_message);
+                            selector.closest('.fpsml-field-wrap').find('.fpsml-error').text(upload_limit_message);
                             selector.closest('.fpsml-field').find('.fpsml-upload-count').val(current_upload_count);
                             return false;
                         }

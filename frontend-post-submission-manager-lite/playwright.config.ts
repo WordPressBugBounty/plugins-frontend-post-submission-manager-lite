@@ -13,6 +13,7 @@ export default defineConfig({
   },
   outputDir: 'test-results',
   use: {
+    channel: process.env.FPSML_BROWSER_CHANNEL || undefined,
     screenshot: 'only-on-failure',
     trace: 'retain-on-failure',
     video: 'off',

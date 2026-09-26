@@ -15,7 +15,7 @@ if (!class_exists('Frontend_Post_Submission_Manager_Lite')) {
          *
          * @var string
          */
-        public $version = '1.3.4';
+        public $version = '1.3.5';
 
         /**
          * The single instance of the class.
@@ -131,6 +131,7 @@ if (!class_exists('Frontend_Post_Submission_Manager_Lite')) {
             include(FPSML_PATH . '/includes/classes/class-fpsml-ajax.php');
             include(FPSML_PATH . '/includes/classes/class-fpsml-frontend-hooks.php');
             include(FPSML_PATH . '/includes/classes/class-fpsml-notification.php');
+            include(FPSML_PATH . '/includes/classes/class-fpsml-measurement.php');
 
 
             //include all the admin related classes
